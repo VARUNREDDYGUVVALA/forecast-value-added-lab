@@ -100,3 +100,18 @@ test('forecast explorer and copilot can use every catalog item', async ({ page }
   await page.getByRole('button', { name: 'Run investigation' }).click()
   await expect(page.getByRole('button', { name: /Evidence · SKU-137/ })).toBeVisible()
 })
+
+test('demand planner accepts one day and pastes more than 365 days', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('button', { name: 'Plan my demand' }).click()
+  const history = page.getByLabel('Daily demand totals')
+  await history.fill('45')
+  await page.getByLabel('Stock on hand').fill('20')
+  await page.getByLabel('Units per pack').fill('7')
+  await page.getByRole('button', { name: 'Calculate plan' }).click()
+  await expect(page.getByText('301 units', { exact: true })).toBeVisible()
+  await expect(page.getByText(/Provisional plan/)).toBeVisible()
+  await history.fill('45 '.repeat(5000))
+  await page.getByRole('button', { name: 'Calculate plan' }).click()
+  await expect(page.getByText(/5,000 submitted days/)).toBeVisible()
+})

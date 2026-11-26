@@ -14,15 +14,15 @@ export function sampleHistory(item: Item) {
 }
 
 export function parseHistory(text: string) {
-  const input = text.trim()
-  if (!input) throw new Error('Enter at least 14 daily totals, oldest first.')
-  if (input.length > 12000) throw new Error('Paste up to 365 daily totals.')
-  const tokens = input.split(/[\s,;]+/)
-  if (tokens.some(token => !/^\d{1,7}$/.test(token) || Number(token) > 1000000)) {
-    throw new Error('Use whole numbers from 0 to 1,000,000. Separate daily totals with commas, spaces, or new lines.')
+  const history: number[] = []
+  for (const [token] of text.matchAll(/[^\s,;]+/g)) {
+    if (!/^\d{1,7}$/.test(token) || Number(token) > 1000000) {
+      throw new Error('Use whole numbers from 0 to 1,000,000. Separate daily totals with commas, spaces, or new lines.')
+    }
+    history.push(Number(token))
   }
-  if (tokens.length < 14 || tokens.length > 365) throw new Error('Enter between 14 and 365 daily totals.')
-  return tokens.map(Number)
+  if (!history.length) throw new Error('Enter at least one daily total, oldest first.')
+  return history
 }
 
 const mean = (values: number[]) => values.reduce((sum, value) => sum + value, 0) / values.length
@@ -33,7 +33,7 @@ type Model = typeof models[number]
 function predict(history: number[], horizon: number, model: Model) {
   const week = history.slice(-7)
   const recent = mean(week)
-  const dailyTrend = (recent - mean(history.slice(-14, -7))) / 7
+  const dailyTrend = model === 'Damped trend' ? (recent - mean(history.slice(-14, -7))) / 7 : 0
   return Array.from({ length: horizon }, (_, day) => {
     if (model === 'Weekly seasonal') return week[day % 7]
     if (model === 'Recent average') return recent
@@ -42,19 +42,21 @@ function predict(history: number[], horizon: number, model: Model) {
 }
 
 export function planDemand(history: number[], horizon: number, stock: number, pack: number) {
-  const origins = Array.from({ length: Math.max(0, history.length - horizon - 13) }, (_, index) => index + 14).slice(-56)
+  const lastOrigin = history.length - horizon
+  const firstOrigin = Math.max(14, lastOrigin - 55)
+  const origins = Array.from({ length: Math.max(0, lastOrigin - firstOrigin + 1) }, (_, index) => firstOrigin + index)
   const eligible = origins.length >= 8
   const split = eligible ? Math.floor(origins.length * 0.65) : 0
   // Keep target periods used for model selection disjoint from the evaluation targets.
   const evaluation = eligible ? origins.slice(split) : []
   const selection = eligible ? origins.slice(0, split).filter(origin => origin + horizon <= evaluation[0]) : []
   const errors = (model: Model, indexes: number[]) => indexes.map(origin =>
-    sum(history.slice(origin, origin + horizon)) - sum(predict(history.slice(0, origin), horizon, model)),
+    sum(history.slice(origin, origin + horizon)) - sum(predict(history.slice(origin - 14, origin), horizon, model)),
   )
   const model = selection.length ? [...models].sort((a, b) =>
     sum(errors(a, selection).map(Math.abs)) - sum(errors(b, selection).map(Math.abs)),
-  )[0] : models[0]
-  const daily = predict(history, horizon, model)
+  )[0] : history.length < 7 ? 'Recent average' : models[0]
+  const daily = predict(history.slice(-14), horizon, model)
   const total = sum(daily)
   const residuals = errors(model, evaluation).map(Math.abs).sort((a, b) => a - b)
   const baseline = errors(models[0], evaluation)

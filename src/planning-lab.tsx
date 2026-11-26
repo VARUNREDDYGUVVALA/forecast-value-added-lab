@@ -73,8 +73,8 @@ export function PlanningLab() {
             </select></label>
           </div>
           <label>Daily demand totals<textarea value={draft.text} onChange={e => updateDraft({ text: e.target.value, sample: false })}
-            rows={5} maxLength={12000} placeholder="Example: 18, 21, 16, 24, 19, 35, 32…" aria-describedby="planning-format" /></label>
-          <p id="planning-format" className="muted">Paste 14–365 consecutive daily totals, oldest first. Include zero-sales days and use demand estimates if stockouts hid sales. Your values stay in this browser tab.</p>
+            rows={5} placeholder="Example: 18, 21, 16, 24, 19, 35, 32…" aria-describedby="planning-format" /></label>
+          <p id="planning-format" className="muted">Enter one or more consecutive daily totals, oldest first. Include zero-sales days and use demand estimates if stockouts hid sales. Your values stay in this browser tab.</p>
           <button className="text-button" type="button" onClick={() => {
             updateDraft({ text: sampleHistory(item).join(', '), sample: true })
           }}>Load sample history <ArrowRight size={14}/></button>
@@ -104,14 +104,16 @@ export function PlanningLab() {
             {result.plan.selection > 0 && <span>Weekly seasonal benchmark <b>{percent(result.plan.baselineWape)}</b></span>}
           </div>
           <p>{result.plan.upper === null
-            ? 'The order uses the rounded point forecast. Add more daily history to estimate a safety buffer.'
+            ? result.history.length < 7
+              ? 'Provisional plan. The forecast repeats your average daily demand, and there is too little history to estimate a safety buffer.'
+              : 'The order uses the rounded point forecast. Add more daily history to estimate a safety buffer.'
             : 'The target uses the top of the historical-error range, then subtracts on-hand stock. The order is rounded up to a full pack.'}</p>
           <p className="muted">This estimates demand during lead time. Check incoming orders, shelf life, and supplier minimums before ordering.</p>
         </div>}
       </section>
     </div>
     {result && <section className="panel">
-      <header className="panel-head"><div><h2>Demand history and forecast</h2><p>{result.history.length} submitted days · {result.plan.evaluation} chronological holdout windows</p></div></header>
+      <header className="panel-head"><div><h2>Demand history and forecast</h2><p>{number(result.history.length)} submitted {result.history.length === 1 ? 'day' : 'days'} · {result.plan.evaluation} chronological holdout windows</p></div></header>
       <div className="chart"><ResponsiveContainer width="100%" height="100%"><LineChart data={chart} margin={{ top: 10, right: 18, left: -10, bottom: 2 }}>
         <CartesianGrid vertical={false} stroke="#e8ece6" strokeDasharray="3 4" />
         <XAxis dataKey="label" minTickGap={18} tick={{ fontSize: 11, fill: '#586762' }} />
