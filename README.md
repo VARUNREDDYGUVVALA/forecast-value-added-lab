@@ -50,7 +50,7 @@ Start the FastAPI dev server with `uvicorn backend.api:app --port 8000`. Start V
 
 ## Measured model results
 
-The benchmark uses 252 synthetic daily observations from three chronological 14-day windows across six SKUs. The grocery promotion walkthrough uses hand-authored historical scenarios independent of this benchmark.
+The benchmark uses 252 synthetic daily observations from three chronological 14-day windows across six SKUs. Forecast Explorer and Forecast Copilot include all 96 catalog items. The six original cases are hand-authored, and the remaining cases use reproducible synthetic forecast versions and observed sales. These cases are independent of the model benchmark.
 
 | Model | WAPE | MAE | RMSE | MASE | Mean bias |
 | --- | ---: | ---: | ---: | ---: | ---: |

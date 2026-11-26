@@ -179,7 +179,10 @@ function App() {
   const picker = <label className="select-control"><PackageSearch size={16} /><select aria-label="Product" value={selected.sku} onChange={e => {
     const p = data.products.find(item => item.sku === e.target.value)
     if (p) selectProduct(p)
-  }}>{data.products.map(p => <option key={p.sku} value={p.sku}>{p.name}</option>)}</select><ChevronDown size={14} /></label>
+  }}>{categories.slice(1).map(group => <optgroup key={group} label={group}>
+    {data.products.filter(p => p.category === group).sort((a, b) => a.name.localeCompare(b.name))
+      .map(p => <option key={p.sku} value={p.sku}>{p.name}</option>)}
+  </optgroup>)}</select><ChevronDown size={14} /></label>
 
   const filteredView = ['Overview', 'FVA scorecard', 'Planner overrides'].includes(page)
   return <div className="app">

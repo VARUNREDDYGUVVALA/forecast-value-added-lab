@@ -19,6 +19,26 @@ CASES = [
 ]
 
 
+# Preserve saved replay IDs and the authored historical cases for these catalog entries.
+LEGACY_CATALOG_IDS = {"SKU-115", "SKU-102", "SKU-125", "SKU-113", "SKU-103", "SKU-128"}
+CATALOG = json.loads((Path(__file__).resolve().parents[1] / "src" / "catalog.json").read_text())
+
+
+def catalog_cases():
+    yield from CASES
+    for item in CATALOG:
+        if item["id"] in LEGACY_CATALOG_IDS:
+            continue
+        rng = random.Random(771 + item["index"])
+        base = rng.randint(210, 1120)
+        model = base + rng.randint(-95, 140)
+        promotion = model + rng.randrange(0, 100, 5)
+        actual = max(0, promotion + rng.randint(-65, 65))
+        override = max(0, promotion + rng.randint(-110, 145)) if rng.random() < 0.8 else None
+        reason = "Simulated planning adjustment" if override is not None else "No override"
+        yield (item["id"], item["name"], item["category"], base, model, promotion, override, actual, reason)
+
+
 def latest(events, keys, timestamp, cutoff):
     """Pick the latest eligible immutable version and reject conflicting duplicates."""
     versions = {}
@@ -68,7 +88,7 @@ def score(forecasts, actuals, cutoff=CUTOFF, as_of=AS_OF, override_only=False):
 
 def demo_events():
     forecasts, actuals, products = [], [], []
-    for sku, name, category, base, ml, promo, override, actual, reason in CASES:
+    for sku, name, category, base, ml, promo, override, actual, reason in catalog_cases():
         target = "2025-03-08"
         versions = [
             dict(sku=sku, target=target, stage=stage, units=units, issued=f"2025-02-{24 + i}T13:00:00Z")

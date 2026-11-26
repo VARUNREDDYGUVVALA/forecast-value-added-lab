@@ -1,0 +1,578 @@
+[
+  {
+    "id": "SKU-101",
+    "name": "Bananas",
+    "category": "Produce",
+    "index": 0
+  },
+  {
+    "id": "SKU-102",
+    "name": "Fresh Apples",
+    "category": "Produce",
+    "index": 1
+  },
+  {
+    "id": "SKU-103",
+    "name": "Hass Avocado",
+    "category": "Produce",
+    "index": 2
+  },
+  {
+    "id": "SKU-104",
+    "name": "Roma Tomatoes",
+    "category": "Produce",
+    "index": 3
+  },
+  {
+    "id": "SKU-105",
+    "name": "Carrots",
+    "category": "Produce",
+    "index": 4
+  },
+  {
+    "id": "SKU-106",
+    "name": "Baby Spinach",
+    "category": "Produce",
+    "index": 5
+  },
+  {
+    "id": "SKU-107",
+    "name": "Strawberries",
+    "category": "Produce",
+    "index": 6
+  },
+  {
+    "id": "SKU-108",
+    "name": "Blueberries",
+    "category": "Produce",
+    "index": 7
+  },
+  {
+    "id": "SKU-109",
+    "name": "Broccoli",
+    "category": "Produce",
+    "index": 8
+  },
+  {
+    "id": "SKU-110",
+    "name": "Yellow Onions",
+    "category": "Produce",
+    "index": 9
+  },
+  {
+    "id": "SKU-111",
+    "name": "Russet Potatoes",
+    "category": "Produce",
+    "index": 10
+  },
+  {
+    "id": "SKU-112",
+    "name": "Cucumbers",
+    "category": "Produce",
+    "index": 11
+  },
+  {
+    "id": "SKU-113",
+    "name": "Whole Milk",
+    "category": "Dairy",
+    "index": 12
+  },
+  {
+    "id": "SKU-114",
+    "name": "2% Milk",
+    "category": "Dairy",
+    "index": 13
+  },
+  {
+    "id": "SKU-115",
+    "name": "Greek Yogurt",
+    "category": "Dairy",
+    "index": 14
+  },
+  {
+    "id": "SKU-116",
+    "name": "Vanilla Yogurt",
+    "category": "Dairy",
+    "index": 15
+  },
+  {
+    "id": "SKU-117",
+    "name": "Salted Butter",
+    "category": "Dairy",
+    "index": 16
+  },
+  {
+    "id": "SKU-118",
+    "name": "Cheddar Cheese",
+    "category": "Dairy",
+    "index": 17
+  },
+  {
+    "id": "SKU-119",
+    "name": "Mozzarella",
+    "category": "Dairy",
+    "index": 18
+  },
+  {
+    "id": "SKU-120",
+    "name": "Cottage Cheese",
+    "category": "Dairy",
+    "index": 19
+  },
+  {
+    "id": "SKU-121",
+    "name": "Large Eggs",
+    "category": "Dairy",
+    "index": 20
+  },
+  {
+    "id": "SKU-122",
+    "name": "Heavy Cream",
+    "category": "Dairy",
+    "index": 21
+  },
+  {
+    "id": "SKU-123",
+    "name": "Sour Cream",
+    "category": "Dairy",
+    "index": 22
+  },
+  {
+    "id": "SKU-124",
+    "name": "Oat Milk",
+    "category": "Dairy",
+    "index": 23
+  },
+  {
+    "id": "SKU-125",
+    "name": "Whole Wheat Bread",
+    "category": "Bakery",
+    "index": 24
+  },
+  {
+    "id": "SKU-126",
+    "name": "Sourdough Loaf",
+    "category": "Bakery",
+    "index": 25
+  },
+  {
+    "id": "SKU-127",
+    "name": "White Sandwich Bread",
+    "category": "Bakery",
+    "index": 26
+  },
+  {
+    "id": "SKU-128",
+    "name": "Butter Croissants",
+    "category": "Bakery",
+    "index": 27
+  },
+  {
+    "id": "SKU-129",
+    "name": "Plain Bagels",
+    "category": "Bakery",
+    "index": 28
+  },
+  {
+    "id": "SKU-130",
+    "name": "English Muffins",
+    "category": "Bakery",
+    "index": 29
+  },
+  {
+    "id": "SKU-131",
+    "name": "Brioche Buns",
+    "category": "Bakery",
+    "index": 30
+  },
+  {
+    "id": "SKU-132",
+    "name": "Flour Tortillas",
+    "category": "Bakery",
+    "index": 31
+  },
+  {
+    "id": "SKU-133",
+    "name": "Pita Bread",
+    "category": "Bakery",
+    "index": 32
+  },
+  {
+    "id": "SKU-134",
+    "name": "Blueberry Muffins",
+    "category": "Bakery",
+    "index": 33
+  },
+  {
+    "id": "SKU-135",
+    "name": "Dinner Rolls",
+    "category": "Bakery",
+    "index": 34
+  },
+  {
+    "id": "SKU-136",
+    "name": "Baguettes",
+    "category": "Bakery",
+    "index": 35
+  },
+  {
+    "id": "SKU-137",
+    "name": "Frozen Peas",
+    "category": "Frozen",
+    "index": 36
+  },
+  {
+    "id": "SKU-138",
+    "name": "Frozen Corn",
+    "category": "Frozen",
+    "index": 37
+  },
+  {
+    "id": "SKU-139",
+    "name": "Frozen Broccoli",
+    "category": "Frozen",
+    "index": 38
+  },
+  {
+    "id": "SKU-140",
+    "name": "Frozen Blueberries",
+    "category": "Frozen",
+    "index": 39
+  },
+  {
+    "id": "SKU-141",
+    "name": "Mixed Berries",
+    "category": "Frozen",
+    "index": 40
+  },
+  {
+    "id": "SKU-142",
+    "name": "Cheese Pizza",
+    "category": "Frozen",
+    "index": 41
+  },
+  {
+    "id": "SKU-143",
+    "name": "Pepperoni Pizza",
+    "category": "Frozen",
+    "index": 42
+  },
+  {
+    "id": "SKU-144",
+    "name": "Vanilla Ice Cream",
+    "category": "Frozen",
+    "index": 43
+  },
+  {
+    "id": "SKU-145",
+    "name": "Chocolate Ice Cream",
+    "category": "Frozen",
+    "index": 44
+  },
+  {
+    "id": "SKU-146",
+    "name": "Hash Browns",
+    "category": "Frozen",
+    "index": 45
+  },
+  {
+    "id": "SKU-147",
+    "name": "Potato Fries",
+    "category": "Frozen",
+    "index": 46
+  },
+  {
+    "id": "SKU-148",
+    "name": "Chicken Nuggets",
+    "category": "Frozen",
+    "index": 47
+  },
+  {
+    "id": "SKU-149",
+    "name": "Long Grain Rice",
+    "category": "Pantry",
+    "index": 48
+  },
+  {
+    "id": "SKU-150",
+    "name": "Jasmine Rice",
+    "category": "Pantry",
+    "index": 49
+  },
+  {
+    "id": "SKU-151",
+    "name": "Spaghetti",
+    "category": "Pantry",
+    "index": 50
+  },
+  {
+    "id": "SKU-152",
+    "name": "Penne",
+    "category": "Pantry",
+    "index": 51
+  },
+  {
+    "id": "SKU-153",
+    "name": "Canned Chickpeas",
+    "category": "Pantry",
+    "index": 52
+  },
+  {
+    "id": "SKU-154",
+    "name": "Black Beans",
+    "category": "Pantry",
+    "index": 53
+  },
+  {
+    "id": "SKU-155",
+    "name": "Diced Tomatoes",
+    "category": "Pantry",
+    "index": 54
+  },
+  {
+    "id": "SKU-156",
+    "name": "Chicken Broth",
+    "category": "Pantry",
+    "index": 55
+  },
+  {
+    "id": "SKU-157",
+    "name": "Olive Oil",
+    "category": "Pantry",
+    "index": 56
+  },
+  {
+    "id": "SKU-158",
+    "name": "Peanut Butter",
+    "category": "Pantry",
+    "index": 57
+  },
+  {
+    "id": "SKU-159",
+    "name": "Rolled Oats",
+    "category": "Pantry",
+    "index": 58
+  },
+  {
+    "id": "SKU-160",
+    "name": "All-Purpose Flour",
+    "category": "Pantry",
+    "index": 59
+  },
+  {
+    "id": "SKU-161",
+    "name": "Chicken Breast",
+    "category": "Proteins",
+    "index": 60
+  },
+  {
+    "id": "SKU-162",
+    "name": "Chicken Thighs",
+    "category": "Proteins",
+    "index": 61
+  },
+  {
+    "id": "SKU-163",
+    "name": "Ground Turkey",
+    "category": "Proteins",
+    "index": 62
+  },
+  {
+    "id": "SKU-164",
+    "name": "Ground Beef",
+    "category": "Proteins",
+    "index": 63
+  },
+  {
+    "id": "SKU-165",
+    "name": "Pork Chops",
+    "category": "Proteins",
+    "index": 64
+  },
+  {
+    "id": "SKU-166",
+    "name": "Salmon Fillets",
+    "category": "Proteins",
+    "index": 65
+  },
+  {
+    "id": "SKU-167",
+    "name": "Shrimp",
+    "category": "Proteins",
+    "index": 66
+  },
+  {
+    "id": "SKU-168",
+    "name": "Firm Tofu",
+    "category": "Proteins",
+    "index": 67
+  },
+  {
+    "id": "SKU-169",
+    "name": "Smoked Sausage",
+    "category": "Proteins",
+    "index": 68
+  },
+  {
+    "id": "SKU-170",
+    "name": "Deli Turkey",
+    "category": "Proteins",
+    "index": 69
+  },
+  {
+    "id": "SKU-171",
+    "name": "Deli Ham",
+    "category": "Proteins",
+    "index": 70
+  },
+  {
+    "id": "SKU-172",
+    "name": "Tempeh",
+    "category": "Proteins",
+    "index": 71
+  },
+  {
+    "id": "SKU-173",
+    "name": "Orange Juice",
+    "category": "Beverages",
+    "index": 72
+  },
+  {
+    "id": "SKU-174",
+    "name": "Apple Juice",
+    "category": "Beverages",
+    "index": 73
+  },
+  {
+    "id": "SKU-175",
+    "name": "Sparkling Water",
+    "category": "Beverages",
+    "index": 74
+  },
+  {
+    "id": "SKU-176",
+    "name": "Still Water",
+    "category": "Beverages",
+    "index": 75
+  },
+  {
+    "id": "SKU-177",
+    "name": "Cold Brew Coffee",
+    "category": "Beverages",
+    "index": 76
+  },
+  {
+    "id": "SKU-178",
+    "name": "Black Tea",
+    "category": "Beverages",
+    "index": 77
+  },
+  {
+    "id": "SKU-179",
+    "name": "Green Tea",
+    "category": "Beverages",
+    "index": 78
+  },
+  {
+    "id": "SKU-180",
+    "name": "Ginger Ale",
+    "category": "Beverages",
+    "index": 79
+  },
+  {
+    "id": "SKU-181",
+    "name": "Cola",
+    "category": "Beverages",
+    "index": 80
+  },
+  {
+    "id": "SKU-182",
+    "name": "Lemonade",
+    "category": "Beverages",
+    "index": 81
+  },
+  {
+    "id": "SKU-183",
+    "name": "Coconut Water",
+    "category": "Beverages",
+    "index": 82
+  },
+  {
+    "id": "SKU-184",
+    "name": "Sports Drink",
+    "category": "Beverages",
+    "index": 83
+  },
+  {
+    "id": "SKU-185",
+    "name": "Tortilla Chips",
+    "category": "Snacks",
+    "index": 84
+  },
+  {
+    "id": "SKU-186",
+    "name": "Potato Chips",
+    "category": "Snacks",
+    "index": 85
+  },
+  {
+    "id": "SKU-187",
+    "name": "Pretzels",
+    "category": "Snacks",
+    "index": 86
+  },
+  {
+    "id": "SKU-188",
+    "name": "Salted Almonds",
+    "category": "Snacks",
+    "index": 87
+  },
+  {
+    "id": "SKU-189",
+    "name": "Cashews",
+    "category": "Snacks",
+    "index": 88
+  },
+  {
+    "id": "SKU-190",
+    "name": "Trail Mix",
+    "category": "Snacks",
+    "index": 89
+  },
+  {
+    "id": "SKU-191",
+    "name": "Granola Bars",
+    "category": "Snacks",
+    "index": 90
+  },
+  {
+    "id": "SKU-192",
+    "name": "Popcorn",
+    "category": "Snacks",
+    "index": 91
+  },
+  {
+    "id": "SKU-193",
+    "name": "Rice Cakes",
+    "category": "Snacks",
+    "index": 92
+  },
+  {
+    "id": "SKU-194",
+    "name": "Hummus",
+    "category": "Snacks",
+    "index": 93
+  },
+  {
+    "id": "SKU-195",
+    "name": "Salsa",
+    "category": "Snacks",
+    "index": 94
+  },
+  {
+    "id": "SKU-196",
+    "name": "Dark Chocolate",
+    "category": "Snacks",
+    "index": 95
+  }
+]

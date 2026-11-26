@@ -1,17 +1,7 @@
-const groups = {
-  Produce: ['Bananas', 'Gala Apples', 'Hass Avocados', 'Roma Tomatoes', 'Carrots', 'Baby Spinach', 'Strawberries', 'Blueberries', 'Broccoli', 'Yellow Onions', 'Russet Potatoes', 'Cucumbers'],
-  Dairy: ['Whole Milk', '2% Milk', 'Greek Yogurt', 'Vanilla Yogurt', 'Salted Butter', 'Cheddar Cheese', 'Mozzarella', 'Cottage Cheese', 'Large Eggs', 'Heavy Cream', 'Sour Cream', 'Oat Milk'],
-  Bakery: ['Whole Wheat Bread', 'Sourdough Loaf', 'White Sandwich Bread', 'Butter Croissants', 'Plain Bagels', 'English Muffins', 'Brioche Buns', 'Flour Tortillas', 'Pita Bread', 'Blueberry Muffins', 'Dinner Rolls', 'Baguettes'],
-  Frozen: ['Frozen Peas', 'Frozen Corn', 'Frozen Broccoli', 'Frozen Blueberries', 'Mixed Berries', 'Cheese Pizza', 'Pepperoni Pizza', 'Vanilla Ice Cream', 'Chocolate Ice Cream', 'Hash Browns', 'Potato Fries', 'Chicken Nuggets'],
-  Pantry: ['Long Grain Rice', 'Jasmine Rice', 'Spaghetti', 'Penne', 'Canned Chickpeas', 'Black Beans', 'Diced Tomatoes', 'Chicken Broth', 'Olive Oil', 'Peanut Butter', 'Rolled Oats', 'All-Purpose Flour'],
-  Proteins: ['Chicken Breast', 'Chicken Thighs', 'Ground Turkey', 'Ground Beef', 'Pork Chops', 'Salmon Fillets', 'Shrimp', 'Firm Tofu', 'Smoked Sausage', 'Deli Turkey', 'Deli Ham', 'Tempeh'],
-  Beverages: ['Orange Juice', 'Apple Juice', 'Sparkling Water', 'Still Water', 'Cold Brew Coffee', 'Black Tea', 'Green Tea', 'Ginger Ale', 'Cola', 'Lemonade', 'Coconut Water', 'Sports Drink'],
-  Snacks: ['Tortilla Chips', 'Potato Chips', 'Pretzels', 'Salted Almonds', 'Cashews', 'Trail Mix', 'Granola Bars', 'Popcorn', 'Rice Cakes', 'Hummus', 'Salsa', 'Dark Chocolate'],
-}
-export const catalog = Object.entries(groups).flatMap(([category, names], group) =>
-  names.map((name, index) => ({ id: `SKU-${101 + group * 12 + index}`, name, category, index: group * 12 + index })),
-)
-export const departments = Object.keys(groups)
+import catalogData from './catalog.json' with { type: 'json' }
+
+export const catalog = catalogData
+export const departments = [...new Set(catalog.map(item => item.category))]
 export type Item = typeof catalog[number]
 
 export function sampleHistory(item: Item) {

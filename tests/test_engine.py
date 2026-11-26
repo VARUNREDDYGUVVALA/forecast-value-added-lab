@@ -1,7 +1,7 @@
 from fastapi.testclient import TestClient
 
 from backend.api import app
-from backend.engine import benchmark, demo_events, score, sales_events
+from backend.engine import CASES, CATALOG, benchmark, demo_events, score, sales_events
 
 
 def test_yogurt_fva_and_cutoff():
@@ -18,7 +18,7 @@ def test_incomplete_actual_and_zero_sales_visible():
     forecasts, actuals, _ = demo_events()
     actuals[0] = dict(actuals[0], complete=False)
     result = score(forecasts, actuals)
-    assert (result["matched"], result["excluded"]) == (5, 1)
+    assert (result["matched"], result["excluded"]) == (95, 1)
     yogurt = [r for r in forecasts if r["sku"] == "YGT-1001"]
     zero = [dict(actuals[0], complete=True, units=0)]
     assert score(yogurt, zero)["stages"][0]["wape"] is None
@@ -34,6 +34,9 @@ def test_as_of_actual_revisions():
 
 def test_portfolio_carry_forward_and_override_only():
     forecasts, actuals, _ = demo_events()
+    original_skus = {case[0] for case in CASES}
+    forecasts = [event for event in forecasts if event["sku"] in original_skus]
+    actuals = [event for event in actuals if event["sku"] in original_skus]
     all_rows = score(forecasts, actuals)
     only_overrides = score(forecasts, actuals, override_only=True)
     assert all_rows["matched"] == 6
@@ -52,8 +55,20 @@ def test_benchmark_out_of_sample_and_reproducible_generator():
 
 def test_api_routes_and_invalid_decision():
     client = TestClient(app)
-    assert client.get("/api/scorecard?category=Dairy").json()["portfolio"]["matched"] == 2
+    assert client.get("/api/scorecard?category=Dairy").json()["portfolio"]["matched"] == 12
     response = client.post("/api/replay", json={"sku": "YGT-1001", "units": 1100})
     assert response.json() == {"absolute_error": 0, "fva": 20}
     assert client.post("/api/replay", json={"sku": "YGT-1001", "units": -1}).status_code == 422
     assert client.post("/api/replay", json={"sku": "missing", "units": 0}).status_code == 404
+
+
+def test_full_catalog_has_forecast_and_investigation_support():
+    client = TestClient(app)
+    response = client.get("/api/scorecard").json()
+    assert response["portfolio"]["matched"] == 96
+    assert {product["name"] for product in response["products"]} == {item["name"] for item in CATALOG}
+    frozen = next(product for product in response["products"] if product["sku"] == "SKU-137")
+    replay = client.post("/api/replay", json={"sku": frozen["sku"], "units": frozen["actual"]})
+    assert replay.json()["absolute_error"] == 0
+    investigation = client.post("/api/investigate", json={"sku": frozen["sku"], "stage": "override"})
+    assert investigation.status_code == 200

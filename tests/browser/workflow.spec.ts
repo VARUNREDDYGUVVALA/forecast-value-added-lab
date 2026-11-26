@@ -86,3 +86,17 @@ test('live events cover all 96 grocery items and can be filtered by department',
   await expect(events.getByText('Frozen Peas', { exact: false })).toBeVisible()
   await expect(events.getByText('Bananas', { exact: false })).toHaveCount(0)
 })
+
+test('forecast explorer and copilot can use every catalog item', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('button', { name: 'Explore the yogurt case' }).click()
+  const picker = page.getByLabel('Product', { exact: true })
+  await expect(picker.locator('option')).toHaveCount(96)
+  await expect(picker.locator('optgroup')).toHaveCount(8)
+  await picker.selectOption({ label: 'Frozen Peas' })
+  await expect(page.getByText(/SKU-137/).first()).toBeVisible()
+  await page.getByRole('button', { name: 'Forecast copilot' }).click()
+  await expect(picker).toHaveValue('SKU-137')
+  await page.getByRole('button', { name: 'Run investigation' }).click()
+  await expect(page.getByRole('button', { name: /Evidence · SKU-137/ })).toBeVisible()
+})

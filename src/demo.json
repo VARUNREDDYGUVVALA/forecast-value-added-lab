@@ -238,48 +238,3605 @@
           "issued": "2025-02-26T13:00:00Z"
         }
       ]
+    },
+    {
+      "sku": "SKU-101",
+      "name": "Bananas",
+      "category": "Produce",
+      "baseline": 594,
+      "ml": 538,
+      "promotion": 563,
+      "override": 608,
+      "actual": 617,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-101",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 594,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-101",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 538,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-101",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 563,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-101",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 608,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-104",
+      "name": "Roma Tomatoes",
+      "category": "Produce",
+      "baseline": 518,
+      "ml": 426,
+      "promotion": 441,
+      "override": null,
+      "actual": 502,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-104",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 518,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-104",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 426,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-104",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 441,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-105",
+      "name": "Carrots",
+      "category": "Produce",
+      "baseline": 707,
+      "ml": 839,
+      "promotion": 839,
+      "override": 943,
+      "actual": 815,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-105",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 707,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-105",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 839,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-105",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 839,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-105",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 943,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-106",
+      "name": "Baby Spinach",
+      "category": "Produce",
+      "baseline": 671,
+      "ml": 778,
+      "promotion": 873,
+      "override": 763,
+      "actual": 919,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-106",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 671,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-106",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 778,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-106",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 873,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-106",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 763,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-107",
+      "name": "Strawberries",
+      "category": "Produce",
+      "baseline": 444,
+      "ml": 463,
+      "promotion": 533,
+      "override": 595,
+      "actual": 562,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-107",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 444,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-107",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 463,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-107",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 533,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-107",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 595,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-108",
+      "name": "Blueberries",
+      "category": "Produce",
+      "baseline": 253,
+      "ml": 247,
+      "promotion": 267,
+      "override": null,
+      "actual": 295,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-108",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 253,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-108",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 247,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-108",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 267,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-109",
+      "name": "Broccoli",
+      "category": "Produce",
+      "baseline": 786,
+      "ml": 830,
+      "promotion": 855,
+      "override": null,
+      "actual": 893,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-109",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 786,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-109",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 830,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-109",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 855,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-110",
+      "name": "Yellow Onions",
+      "category": "Produce",
+      "baseline": 416,
+      "ml": 501,
+      "promotion": 551,
+      "override": 550,
+      "actual": 533,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-110",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 416,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-110",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 501,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-110",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 551,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-110",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 550,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-111",
+      "name": "Russet Potatoes",
+      "category": "Produce",
+      "baseline": 428,
+      "ml": 396,
+      "promotion": 456,
+      "override": null,
+      "actual": 429,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-111",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 428,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-111",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 396,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-111",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 456,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-112",
+      "name": "Cucumbers",
+      "category": "Produce",
+      "baseline": 895,
+      "ml": 828,
+      "promotion": 868,
+      "override": 991,
+      "actual": 884,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-112",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 895,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-112",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 828,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-112",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 868,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-112",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 991,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-114",
+      "name": "2% Milk",
+      "category": "Dairy",
+      "baseline": 653,
+      "ml": 713,
+      "promotion": 718,
+      "override": 764,
+      "actual": 731,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-114",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 653,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-114",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 713,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-114",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 718,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-114",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 764,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-116",
+      "name": "Vanilla Yogurt",
+      "category": "Dairy",
+      "baseline": 1037,
+      "ml": 1036,
+      "promotion": 1041,
+      "override": 1012,
+      "actual": 1046,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-116",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 1037,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-116",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1036,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-116",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1041,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-116",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1012,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-117",
+      "name": "Salted Butter",
+      "category": "Dairy",
+      "baseline": 523,
+      "ml": 550,
+      "promotion": 625,
+      "override": 562,
+      "actual": 598,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-117",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 523,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-117",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 550,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-117",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 625,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-117",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 562,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-118",
+      "name": "Cheddar Cheese",
+      "category": "Dairy",
+      "baseline": 810,
+      "ml": 838,
+      "promotion": 838,
+      "override": 796,
+      "actual": 864,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-118",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 810,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-118",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 838,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-118",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 838,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-118",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 796,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-119",
+      "name": "Mozzarella",
+      "category": "Dairy",
+      "baseline": 700,
+      "ml": 785,
+      "promotion": 790,
+      "override": 838,
+      "actual": 850,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-119",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 700,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-119",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 785,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-119",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 790,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-119",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 838,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-120",
+      "name": "Cottage Cheese",
+      "category": "Dairy",
+      "baseline": 864,
+      "ml": 993,
+      "promotion": 1038,
+      "override": 1177,
+      "actual": 1088,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-120",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 864,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-120",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 993,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-120",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1038,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-120",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1177,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-121",
+      "name": "Large Eggs",
+      "category": "Dairy",
+      "baseline": 901,
+      "ml": 858,
+      "promotion": 953,
+      "override": 930,
+      "actual": 890,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-121",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 901,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-121",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 858,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-121",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 953,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-121",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 930,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-122",
+      "name": "Heavy Cream",
+      "category": "Dairy",
+      "baseline": 795,
+      "ml": 833,
+      "promotion": 898,
+      "override": 1011,
+      "actual": 963,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-122",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 795,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-122",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 833,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-122",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 898,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-122",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1011,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-123",
+      "name": "Sour Cream",
+      "category": "Dairy",
+      "baseline": 1027,
+      "ml": 1088,
+      "promotion": 1128,
+      "override": 1247,
+      "actual": 1087,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-123",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 1027,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-123",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1088,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-123",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1128,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-123",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1247,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-124",
+      "name": "Oat Milk",
+      "category": "Dairy",
+      "baseline": 525,
+      "ml": 471,
+      "promotion": 551,
+      "override": 653,
+      "actual": 508,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-124",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 525,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-124",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 471,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-124",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 551,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-124",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 653,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-126",
+      "name": "Sourdough Loaf",
+      "category": "Bakery",
+      "baseline": 784,
+      "ml": 802,
+      "promotion": 877,
+      "override": 987,
+      "actual": 911,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-126",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 784,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-126",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 802,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-126",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 877,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-126",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 987,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-127",
+      "name": "White Sandwich Bread",
+      "category": "Bakery",
+      "baseline": 819,
+      "ml": 824,
+      "promotion": 844,
+      "override": 978,
+      "actual": 799,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-127",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 819,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-127",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 824,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-127",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 844,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-127",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 978,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-129",
+      "name": "Plain Bagels",
+      "category": "Bakery",
+      "baseline": 1104,
+      "ml": 1057,
+      "promotion": 1117,
+      "override": 1099,
+      "actual": 1173,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-129",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 1104,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-129",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1057,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-129",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1117,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-129",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1099,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-130",
+      "name": "English Muffins",
+      "category": "Bakery",
+      "baseline": 897,
+      "ml": 929,
+      "promotion": 1019,
+      "override": 1069,
+      "actual": 966,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-130",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 897,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-130",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 929,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-130",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1019,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-130",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1069,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-131",
+      "name": "Brioche Buns",
+      "category": "Bakery",
+      "baseline": 317,
+      "ml": 274,
+      "promotion": 329,
+      "override": null,
+      "actual": 293,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-131",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 317,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-131",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 274,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-131",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 329,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-132",
+      "name": "Flour Tortillas",
+      "category": "Bakery",
+      "baseline": 771,
+      "ml": 715,
+      "promotion": 800,
+      "override": 849,
+      "actual": 823,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-132",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 771,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-132",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 715,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-132",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 800,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-132",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 849,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-133",
+      "name": "Pita Bread",
+      "category": "Bakery",
+      "baseline": 321,
+      "ml": 273,
+      "promotion": 348,
+      "override": 316,
+      "actual": 387,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-133",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 321,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-133",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 273,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-133",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 348,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-133",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 316,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-134",
+      "name": "Blueberry Muffins",
+      "category": "Bakery",
+      "baseline": 700,
+      "ml": 780,
+      "promotion": 850,
+      "override": null,
+      "actual": 807,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-134",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 700,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-134",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 780,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-134",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 850,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-135",
+      "name": "Dinner Rolls",
+      "category": "Bakery",
+      "baseline": 715,
+      "ml": 676,
+      "promotion": 686,
+      "override": 814,
+      "actual": 692,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-135",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 715,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-135",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 676,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-135",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 686,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-135",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 814,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-136",
+      "name": "Baguettes",
+      "category": "Bakery",
+      "baseline": 676,
+      "ml": 583,
+      "promotion": 673,
+      "override": 717,
+      "actual": 685,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-136",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 676,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-136",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 583,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-136",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 673,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-136",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 717,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-137",
+      "name": "Frozen Peas",
+      "category": "Frozen",
+      "baseline": 586,
+      "ml": 679,
+      "promotion": 694,
+      "override": 739,
+      "actual": 671,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-137",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 586,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-137",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 679,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-137",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 694,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-137",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 739,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-138",
+      "name": "Frozen Corn",
+      "category": "Frozen",
+      "baseline": 583,
+      "ml": 603,
+      "promotion": 648,
+      "override": 659,
+      "actual": 616,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-138",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 583,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-138",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 603,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-138",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 648,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-138",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 659,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-139",
+      "name": "Frozen Broccoli",
+      "category": "Frozen",
+      "baseline": 261,
+      "ml": 399,
+      "promotion": 459,
+      "override": 505,
+      "actual": 441,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-139",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 261,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-139",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 399,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-139",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 459,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-139",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 505,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-140",
+      "name": "Frozen Blueberries",
+      "category": "Frozen",
+      "baseline": 941,
+      "ml": 1068,
+      "promotion": 1158,
+      "override": null,
+      "actual": 1212,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-140",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 941,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-140",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1068,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-140",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1158,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-141",
+      "name": "Mixed Berries",
+      "category": "Frozen",
+      "baseline": 303,
+      "ml": 253,
+      "promotion": 333,
+      "override": 348,
+      "actual": 377,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-141",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 303,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-141",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 253,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-141",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 333,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-141",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 348,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-142",
+      "name": "Cheese Pizza",
+      "category": "Frozen",
+      "baseline": 242,
+      "ml": 248,
+      "promotion": 343,
+      "override": 377,
+      "actual": 353,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-142",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 242,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-142",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 248,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-142",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 343,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-142",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 377,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-143",
+      "name": "Pepperoni Pizza",
+      "category": "Frozen",
+      "baseline": 338,
+      "ml": 248,
+      "promotion": 343,
+      "override": 317,
+      "actual": 377,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-143",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 338,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-143",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 248,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-143",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 343,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-143",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 317,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-144",
+      "name": "Vanilla Ice Cream",
+      "category": "Frozen",
+      "baseline": 825,
+      "ml": 765,
+      "promotion": 785,
+      "override": 846,
+      "actual": 782,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-144",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 825,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-144",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 765,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-144",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 785,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-144",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 846,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-145",
+      "name": "Chocolate Ice Cream",
+      "category": "Frozen",
+      "baseline": 223,
+      "ml": 201,
+      "promotion": 206,
+      "override": 158,
+      "actual": 219,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-145",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 223,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-145",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 201,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-145",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 206,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-145",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 158,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-146",
+      "name": "Hash Browns",
+      "category": "Frozen",
+      "baseline": 374,
+      "ml": 434,
+      "promotion": 449,
+      "override": 363,
+      "actual": 489,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-146",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 374,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-146",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 434,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-146",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 449,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-146",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 363,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-147",
+      "name": "Potato Fries",
+      "category": "Frozen",
+      "baseline": 340,
+      "ml": 400,
+      "promotion": 450,
+      "override": null,
+      "actual": 473,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-147",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 340,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-147",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 400,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-147",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 450,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-148",
+      "name": "Chicken Nuggets",
+      "category": "Frozen",
+      "baseline": 691,
+      "ml": 732,
+      "promotion": 782,
+      "override": null,
+      "actual": 841,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-148",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 691,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-148",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 732,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-148",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 782,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-149",
+      "name": "Long Grain Rice",
+      "category": "Pantry",
+      "baseline": 582,
+      "ml": 706,
+      "promotion": 731,
+      "override": 686,
+      "actual": 699,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-149",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 582,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-149",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 706,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-149",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 731,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-149",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 686,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-150",
+      "name": "Jasmine Rice",
+      "category": "Pantry",
+      "baseline": 431,
+      "ml": 423,
+      "promotion": 503,
+      "override": 490,
+      "actual": 563,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-150",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 431,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-150",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 423,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-150",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 503,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-150",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 490,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-151",
+      "name": "Spaghetti",
+      "category": "Pantry",
+      "baseline": 793,
+      "ml": 864,
+      "promotion": 939,
+      "override": 947,
+      "actual": 951,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-151",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 793,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-151",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 864,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-151",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 939,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-151",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 947,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-152",
+      "name": "Penne",
+      "category": "Pantry",
+      "baseline": 326,
+      "ml": 333,
+      "promotion": 383,
+      "override": 424,
+      "actual": 359,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-152",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 326,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-152",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 333,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-152",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 383,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-152",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 424,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-153",
+      "name": "Canned Chickpeas",
+      "category": "Pantry",
+      "baseline": 554,
+      "ml": 612,
+      "promotion": 647,
+      "override": null,
+      "actual": 623,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-153",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 554,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-153",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 612,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-153",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 647,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-154",
+      "name": "Black Beans",
+      "category": "Pantry",
+      "baseline": 870,
+      "ml": 970,
+      "promotion": 990,
+      "override": 904,
+      "actual": 1014,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-154",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 870,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-154",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 970,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-154",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 990,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-154",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 904,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-155",
+      "name": "Diced Tomatoes",
+      "category": "Pantry",
+      "baseline": 486,
+      "ml": 555,
+      "promotion": 600,
+      "override": 596,
+      "actual": 563,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-155",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 486,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-155",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 555,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-155",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 600,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-155",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 596,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-156",
+      "name": "Chicken Broth",
+      "category": "Pantry",
+      "baseline": 776,
+      "ml": 882,
+      "promotion": 922,
+      "override": 884,
+      "actual": 979,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-156",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 776,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-156",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 882,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-156",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 922,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-156",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 884,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-157",
+      "name": "Olive Oil",
+      "category": "Pantry",
+      "baseline": 575,
+      "ml": 691,
+      "promotion": 731,
+      "override": 872,
+      "actual": 791,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-157",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 575,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-157",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 691,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-157",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 731,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-157",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 872,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-158",
+      "name": "Peanut Butter",
+      "category": "Pantry",
+      "baseline": 413,
+      "ml": 355,
+      "promotion": 365,
+      "override": 322,
+      "actual": 359,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-158",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 413,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-158",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 355,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-158",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 365,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-158",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 322,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-159",
+      "name": "Rolled Oats",
+      "category": "Pantry",
+      "baseline": 421,
+      "ml": 402,
+      "promotion": 477,
+      "override": 376,
+      "actual": 461,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-159",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 421,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-159",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 402,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-159",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 477,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-159",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 376,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-160",
+      "name": "All-Purpose Flour",
+      "category": "Pantry",
+      "baseline": 318,
+      "ml": 399,
+      "promotion": 434,
+      "override": null,
+      "actual": 439,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-160",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 318,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-160",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 399,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-160",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 434,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-161",
+      "name": "Chicken Breast",
+      "category": "Proteins",
+      "baseline": 371,
+      "ml": 364,
+      "promotion": 424,
+      "override": 392,
+      "actual": 396,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-161",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 371,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-161",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 364,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-161",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 424,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-161",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 392,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-162",
+      "name": "Chicken Thighs",
+      "category": "Proteins",
+      "baseline": 959,
+      "ml": 1031,
+      "promotion": 1116,
+      "override": 1122,
+      "actual": 1137,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-162",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 959,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-162",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1031,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-162",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1116,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-162",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1122,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-163",
+      "name": "Ground Turkey",
+      "category": "Proteins",
+      "baseline": 790,
+      "ml": 851,
+      "promotion": 896,
+      "override": 841,
+      "actual": 922,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-163",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 790,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-163",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 851,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-163",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 896,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-163",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 841,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-164",
+      "name": "Ground Beef",
+      "category": "Proteins",
+      "baseline": 512,
+      "ml": 644,
+      "promotion": 674,
+      "override": 620,
+      "actual": 666,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-164",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 512,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-164",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 644,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-164",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 674,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-164",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 620,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-165",
+      "name": "Pork Chops",
+      "category": "Proteins",
+      "baseline": 841,
+      "ml": 908,
+      "promotion": 938,
+      "override": 1001,
+      "actual": 966,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-165",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 841,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-165",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 908,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-165",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 938,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-165",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1001,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-166",
+      "name": "Salmon Fillets",
+      "category": "Proteins",
+      "baseline": 627,
+      "ml": 536,
+      "promotion": 621,
+      "override": null,
+      "actual": 582,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-166",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 627,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-166",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 536,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-166",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 621,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-167",
+      "name": "Shrimp",
+      "category": "Proteins",
+      "baseline": 778,
+      "ml": 749,
+      "promotion": 819,
+      "override": null,
+      "actual": 783,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-167",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 778,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-167",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 749,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-167",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 819,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-168",
+      "name": "Firm Tofu",
+      "category": "Proteins",
+      "baseline": 730,
+      "ml": 784,
+      "promotion": 834,
+      "override": null,
+      "actual": 841,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-168",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 730,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-168",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 784,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-168",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 834,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-169",
+      "name": "Smoked Sausage",
+      "category": "Proteins",
+      "baseline": 843,
+      "ml": 951,
+      "promotion": 966,
+      "override": 972,
+      "actual": 972,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-169",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 843,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-169",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 951,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-169",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 966,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-169",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 972,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-170",
+      "name": "Deli Turkey",
+      "category": "Proteins",
+      "baseline": 422,
+      "ml": 560,
+      "promotion": 625,
+      "override": 750,
+      "actual": 676,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-170",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 422,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-170",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 560,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-170",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 625,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-170",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 750,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-171",
+      "name": "Deli Ham",
+      "category": "Proteins",
+      "baseline": 801,
+      "ml": 874,
+      "promotion": 969,
+      "override": 968,
+      "actual": 1003,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-171",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 801,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-171",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 874,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-171",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 969,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-171",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 968,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-172",
+      "name": "Tempeh",
+      "category": "Proteins",
+      "baseline": 1107,
+      "ml": 1029,
+      "promotion": 1104,
+      "override": 1169,
+      "actual": 1083,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-172",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 1107,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-172",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1029,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-172",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1104,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-172",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1169,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-173",
+      "name": "Orange Juice",
+      "category": "Beverages",
+      "baseline": 891,
+      "ml": 925,
+      "promotion": 1005,
+      "override": 1105,
+      "actual": 945,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-173",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 891,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-173",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 925,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-173",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1005,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-173",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1105,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-174",
+      "name": "Apple Juice",
+      "category": "Beverages",
+      "baseline": 870,
+      "ml": 982,
+      "promotion": 1062,
+      "override": 1090,
+      "actual": 1053,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-174",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 870,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-174",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 982,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-174",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1062,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-174",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1090,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-175",
+      "name": "Sparkling Water",
+      "category": "Beverages",
+      "baseline": 267,
+      "ml": 249,
+      "promotion": 259,
+      "override": 175,
+      "actual": 230,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-175",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 267,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-175",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 249,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-175",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 259,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-175",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 175,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-176",
+      "name": "Still Water",
+      "category": "Beverages",
+      "baseline": 314,
+      "ml": 249,
+      "promotion": 324,
+      "override": 342,
+      "actual": 300,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-176",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 314,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-176",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 249,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-176",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 324,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-176",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 342,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-177",
+      "name": "Cold Brew Coffee",
+      "category": "Beverages",
+      "baseline": 608,
+      "ml": 730,
+      "promotion": 790,
+      "override": 836,
+      "actual": 771,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-177",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 608,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-177",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 730,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-177",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 790,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-177",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 836,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-178",
+      "name": "Black Tea",
+      "category": "Beverages",
+      "baseline": 1070,
+      "ml": 1088,
+      "promotion": 1153,
+      "override": null,
+      "actual": 1114,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-178",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 1070,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-178",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1088,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-178",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1153,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-179",
+      "name": "Green Tea",
+      "category": "Beverages",
+      "baseline": 213,
+      "ml": 288,
+      "promotion": 293,
+      "override": null,
+      "actual": 300,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-179",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 213,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-179",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 288,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-179",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 293,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-180",
+      "name": "Ginger Ale",
+      "category": "Beverages",
+      "baseline": 1052,
+      "ml": 1083,
+      "promotion": 1153,
+      "override": 1268,
+      "actual": 1111,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-180",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 1052,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-180",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1083,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-180",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1153,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-180",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1268,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-181",
+      "name": "Cola",
+      "category": "Beverages",
+      "baseline": 803,
+      "ml": 811,
+      "promotion": 856,
+      "override": null,
+      "actual": 907,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-181",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 803,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-181",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 811,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-181",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 856,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-182",
+      "name": "Lemonade",
+      "category": "Beverages",
+      "baseline": 1042,
+      "ml": 1147,
+      "promotion": 1242,
+      "override": 1384,
+      "actual": 1191,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-182",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 1042,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-182",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1147,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-182",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1242,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-182",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1384,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-183",
+      "name": "Coconut Water",
+      "category": "Beverages",
+      "baseline": 624,
+      "ml": 606,
+      "promotion": 651,
+      "override": 592,
+      "actual": 674,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-183",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 624,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-183",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 606,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-183",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 651,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-183",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 592,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-184",
+      "name": "Sports Drink",
+      "category": "Beverages",
+      "baseline": 984,
+      "ml": 979,
+      "promotion": 1029,
+      "override": 1163,
+      "actual": 1092,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-184",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 984,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-184",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 979,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-184",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1029,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-184",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1163,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-185",
+      "name": "Tortilla Chips",
+      "category": "Snacks",
+      "baseline": 465,
+      "ml": 590,
+      "promotion": 630,
+      "override": 583,
+      "actual": 605,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-185",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 465,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-185",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 590,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-185",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 630,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-185",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 583,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-186",
+      "name": "Potato Chips",
+      "category": "Snacks",
+      "baseline": 432,
+      "ml": 533,
+      "promotion": 568,
+      "override": null,
+      "actual": 513,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-186",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 432,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-186",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 533,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-186",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 568,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-187",
+      "name": "Pretzels",
+      "category": "Snacks",
+      "baseline": 703,
+      "ml": 776,
+      "promotion": 841,
+      "override": 854,
+      "actual": 831,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-187",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 703,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-187",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 776,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-187",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 841,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-187",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 854,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-188",
+      "name": "Salted Almonds",
+      "category": "Snacks",
+      "baseline": 751,
+      "ml": 787,
+      "promotion": 797,
+      "override": 767,
+      "actual": 820,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-188",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 751,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-188",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 787,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-188",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 797,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-188",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 767,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-189",
+      "name": "Cashews",
+      "category": "Snacks",
+      "baseline": 796,
+      "ml": 909,
+      "promotion": 944,
+      "override": 858,
+      "actual": 910,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-189",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 796,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-189",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 909,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-189",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 944,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-189",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 858,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-190",
+      "name": "Trail Mix",
+      "category": "Snacks",
+      "baseline": 351,
+      "ml": 290,
+      "promotion": 300,
+      "override": 341,
+      "actual": 258,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-190",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 351,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-190",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 290,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-190",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 300,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-190",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 341,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-191",
+      "name": "Granola Bars",
+      "category": "Snacks",
+      "baseline": 1084,
+      "ml": 1103,
+      "promotion": 1173,
+      "override": null,
+      "actual": 1120,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "SKU-191",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 1084,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-191",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1103,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-191",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1173,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-192",
+      "name": "Popcorn",
+      "category": "Snacks",
+      "baseline": 788,
+      "ml": 884,
+      "promotion": 914,
+      "override": 873,
+      "actual": 977,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-192",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 788,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-192",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 884,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-192",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 914,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-192",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 873,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-193",
+      "name": "Rice Cakes",
+      "category": "Snacks",
+      "baseline": 805,
+      "ml": 928,
+      "promotion": 968,
+      "override": 1004,
+      "actual": 1013,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-193",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 805,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-193",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 928,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-193",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 968,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-193",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1004,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-194",
+      "name": "Hummus",
+      "category": "Snacks",
+      "baseline": 523,
+      "ml": 550,
+      "promotion": 550,
+      "override": 516,
+      "actual": 574,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-194",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 523,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-194",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 550,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-194",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 550,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-194",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 516,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-195",
+      "name": "Salsa",
+      "category": "Snacks",
+      "baseline": 619,
+      "ml": 654,
+      "promotion": 739,
+      "override": 637,
+      "actual": 680,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-195",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 619,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-195",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 654,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-195",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 739,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-195",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 637,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "SKU-196",
+      "name": "Dark Chocolate",
+      "category": "Snacks",
+      "baseline": 330,
+      "ml": 285,
+      "promotion": 285,
+      "override": 182,
+      "actual": 256,
+      "reason": "Simulated planning adjustment",
+      "versions": [
+        {
+          "sku": "SKU-196",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 330,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "SKU-196",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 285,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "SKU-196",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 285,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "SKU-196",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 182,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
     }
   ],
   "portfolio": {
     "stages": [
       {
         "stage": "baseline",
-        "error": 740,
-        "mae": 123.33333333333333,
-        "wape": 0.15711252653927812,
-        "bias": -740,
+        "error": 9225,
+        "mae": 96.09375,
+        "wape": 0.1313279426000797,
+        "bias": -8205,
         "fva": null
       },
       {
         "stage": "ml",
-        "error": 290,
-        "mae": 48.333333333333336,
-        "wape": 0.06157112526539278,
-        "bias": -290,
-        "fva": 450
+        "error": 5301,
+        "mae": 55.21875,
+        "wape": 0.07546552018677752,
+        "bias": -4971,
+        "fva": 3924
       },
       {
         "stage": "promotion",
-        "error": 120,
-        "mae": 20.0,
-        "wape": 0.025477707006369428,
-        "bias": -40,
-        "fva": 170
+        "error": 3095,
+        "mae": 32.239583333333336,
+        "wape": 0.044060702693468484,
+        "bias": -321,
+        "fva": 2206
       },
       {
         "stage": "override",
-        "error": 380,
-        "mae": 63.333333333333336,
-        "wape": 0.08067940552016985,
-        "bias": 70,
-        "fva": -260
+        "error": 5757,
+        "mae": 59.96875,
+        "wape": 0.08195717783725301,
+        "bias": 1009,
+        "fva": -2662
       }
     ],
-    "matched": 6,
+    "matched": 96,
     "excluded": 0,
-    "coverage": 0.8333333333333334,
-    "win_rate": 0.2,
-    "tie_rate": 0.2
+    "coverage": 0.7916666666666666,
+    "win_rate": 0.21052631578947367,
+    "tie_rate": 0.013157894736842105
   },
   "benchmark": {
     "models": [

@@ -15,6 +15,7 @@ RUN --mount=type=secret,id=build_ca \
     if [ -s /run/secrets/build_ca ]; then export PIP_CERT=/run/secrets/build_ca; fi; \
     pip install --no-cache-dir -r requirements.txt
 COPY --chown=65532:65532 backend ./backend
+COPY --chown=65532:65532 src/catalog.json ./src/catalog.json
 COPY --from=dashboard --chown=65532:65532 /app/dist ./dist
 USER 65532:65532
 EXPOSE 8080
