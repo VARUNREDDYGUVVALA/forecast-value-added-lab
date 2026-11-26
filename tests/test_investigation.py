@@ -1,3 +1,8 @@
+import asyncio
+import sys
+
+from mcp import ClientSession, StdioServerParameters
+from mcp.client.stdio import stdio_client
 from fastapi.testclient import TestClient
 from backend.api import app
 from backend.investigation import investigate
@@ -22,7 +27,16 @@ def test_investigation_rejects_unknown_product_and_unapproved_stage():
     assert client.post("/api/investigate", json={"sku": "YGT-1001", "stage": "publish"}).status_code == 422
 
 
-def test_mcp_tool_shapes_and_numeric_result():
-    from backend.mcp_server import forecast_scorecard, investigate_stage
-    assert forecast_scorecard("Dairy")["portfolio"]["matched"] == 2
-    assert investigate_stage("YGT-1001", "ml")["fva"] == 150
+def test_mcp_transport_tool_shapes_and_numeric_result():
+    async def check():
+        parameters = StdioServerParameters(command=sys.executable, args=["-m", "backend.mcp_server"])
+        async with stdio_client(parameters) as (reader, writer):
+            async with ClientSession(reader, writer) as session:
+                await session.initialize()
+                tools = await session.list_tools()
+                assert {tool.name for tool in tools.tools} == {"forecast_scorecard", "investigate_stage"}
+                result = await session.call_tool("investigate_stage", {"sku": "YGT-1001", "stage": "ml"})
+                assert not result.isError
+                assert result.structuredContent["fva"] == 150
+
+    asyncio.run(check())
