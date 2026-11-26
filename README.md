@@ -67,3 +67,15 @@ The GitHub Actions workflow validates artifact regeneration, Python, browser and
 The [Cloud Run Terraform profile](infrastructure/cloud-run/main.tf) describes an IAM-gated deployment. It requires a billing-enabled GCP project, the Cloud Run and IAM APIs, a pushed container pinned by digest, and permissions for the deployment principal and image reader. Review a Terraform plan before applying it. The profile leaves invocation permissions to the project administrator.
 
 See the [methodology, data dictionary, and architecture](docs/methodology.md) for data contracts, evidence boundaries, and implementation scope.
+
+## Live demand lab
+
+Open **Live demand lab** to run a continuous synthetic experiment. Switch between normal trade, promotion surge, and demand shift. The two forecasts are scored against the same simulated actuals, with decisions calculated before the actuals are generated. The comparison measures forecast error under the simulator's assumptions.
+
+The browser retains the last 600 observations and keeps a separate, arbitrary-precision event counter. The CLI uses the same generator and streams newline-delimited JSON with backpressure. Omit `--count` for a stream that runs until stopped or until its consumer closes. Use the next sequence number and the same regime to resume a segment. Keep the regime schedule externally if replaying a run with regime changes.
+
+```sh
+node scripts/demand-stream.mjs --regime 'Demand shift' --count 100000 > demand.ndjson
+node scripts/demand-stream.mjs --regime 'Promotion surge' --start 9007199254740999 --count 3
+node scripts/demand-stream.mjs | head -n 5
+```
