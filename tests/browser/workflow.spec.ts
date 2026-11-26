@@ -49,3 +49,11 @@ test('live lab advances, pauses and applies a new demand regime', async ({ page 
   await page.getByRole('button', { name: 'Reset stream' }).click()
   await expect(counter).toContainText('0 of 600 retained')
 })
+
+test('online forecasting displays recorded evaluation and coverage in static mode', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('button', { name: 'Online forecasting', exact: true }).click()
+  await expect(page.getByText('Recursive least squares · Synthetic replay', { exact: false })).toBeVisible()
+  await expect(page.getByText('Calibrating', { exact: true })).toHaveCount(0)
+  await expect(page.getByText('Seasonal baseline 17.7%')).toBeVisible()
+})

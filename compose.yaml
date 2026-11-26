@@ -1,6 +1,8 @@
 services:
   forecast:
     build: .
+    environment:
+      FVA_STREAM_TOKEN: ${FVA_STREAM_TOKEN:-}
     ports:
       - "127.0.0.1:8080:8080"
     healthcheck:

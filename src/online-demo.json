@@ -1,0 +1,44 @@
+{
+  "catalog": {
+    "active": 6,
+    "capacity": 1024,
+    "observations": 1200,
+    "series": [
+      "DEMO:SKU-1",
+      "DEMO:SKU-2",
+      "DEMO:SKU-3",
+      "DEMO:SKU-4",
+      "DEMO:SKU-5",
+      "DEMO:SKU-6"
+    ]
+  },
+  "forecast": {
+    "version": 1200,
+    "series": "DEMO:SKU-1",
+    "observations": 200,
+    "scored": 179,
+    "forecast": {
+      "period": 200,
+      "units": 109.72,
+      "baseline": 156,
+      "low": 93.43,
+      "high": 126.01,
+      "promotion": false
+    },
+    "latest": {
+      "period": 199,
+      "actual": 108,
+      "predicted": 110.05,
+      "anomaly": false,
+      "promotion_changed": false
+    },
+    "model_wape": 0.05372172220870834,
+    "baseline_wape": 0.17664801751398687,
+    "fva": 2526.75,
+    "anomalies": 19,
+    "interval_coverage": 0.8805031446540881,
+    "model": "Recursive least squares",
+    "stock": 110,
+    "planning_gap": 17
+  }
+}

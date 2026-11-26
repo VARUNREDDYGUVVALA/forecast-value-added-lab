@@ -79,3 +79,25 @@ node scripts/demand-stream.mjs --regime 'Demand shift' --count 100000 > demand.n
 node scripts/demand-stream.mjs --regime 'Promotion surge' --start 9007199254740999 --count 3
 node scripts/demand-stream.mjs | head -n 5
 ```
+
+## Connect a live sales feed
+
+The **Online forecasting** screen consumes server-sent forecast updates. An existing POS, warehouse job, or event consumer can submit one observation per series and daily period. Each series is a stable store/SKU identifier. Aggregate raw receipts upstream and send completed demand totals in increasing period order. Promotion flags reflect the observed period and the known plan for the next period.
+
+Configure a strong `FVA_STREAM_TOKEN` in your environment or secret store, then start Compose. The same bearer token protects ingestion and forecast reads. Use HTTPS outside localhost.
+
+```sh
+docker compose up --build --wait
+# Example feed. Replace this synthetic producer with your authorized source.
+python -m backend.online_demo --records 1200 | python scripts/ingest-sales.py
+```
+
+Open **Online forecasting**, enter the token and `DEMO:SKU-1`, and connect. Keep publishing NDJSON to the ingestion script to see the model update as completed periods arrive. An example input record is:
+
+```json
+{"series":"DEMO:SKU-1","period":0,"units":133,"promotion":true,"next_promotion":true}
+```
+
+The model uses recursive least squares with a 0.985 forgetting factor, lagged demand, weekday indicators, and promotion plans. Each observation is compared to the forecast issued on the previous period before the model learns from it. After 21 observations, the model is compared against seasonal naive on the same outcomes. It produces a rolling nominal 90% band from prior residuals after another 20 scored observations. The screen shows actual historical band coverage, anomalies, and the difference between available inventory and the upper demand bound.
+
+Ingestion accepts up to 512 events per request and 1,024 active series per process. The service skips repeated or older periods and rejects gaps without committing partial batches. Model state and recent residuals are held in memory. Use one process and retain a replayable upstream log. Durable checkpointing, stream partitioning, and multi-tenant access are outside this profile. GitHub Pages shows a recorded run generated with `python -m backend.online_demo --export src/online-demo.json`.

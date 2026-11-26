@@ -5,12 +5,13 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, Toolti
 import data from './demo.json'
 import { orderScenario, portfolio, quantity, replay, stageLabels, stages, type Product } from './analytics'
 import { LiveLab } from './live-lab'
+import { OnlineLab } from './online-lab'
 import './style.css'
 
 const nav = [
   { label: 'Overview', icon: LayoutDashboard }, { label: 'FVA scorecard', icon: BarChart3 },
   { label: 'Forecast explorer', icon: ChartNoAxesCombined }, { label: 'Planner overrides', icon: SlidersHorizontal },
-  { label: 'Live demand lab', icon: Activity }, { label: 'Inventory risk', icon: Boxes }, { label: 'Forecast copilot', icon: Sparkles },
+  { label: 'Live demand lab', icon: Activity }, { label: 'Online forecasting', icon: ChartNoAxesCombined }, { label: 'Inventory risk', icon: Boxes }, { label: 'Forecast copilot', icon: Sparkles },
   { label: 'Model analytics', icon: Activity }, { label: 'Agent monitor', icon: GitBranch },
   { label: 'Audit history', icon: ClipboardList },
 ]
@@ -198,6 +199,7 @@ function App() {
           'Forecast explorer': 'Inspect forecast versions and replay a historical decision.',
           'Planner overrides': 'Find which overrides improved or worsened accuracy.',
           'Live demand lab': 'Stress-test a planner override guardrail against a continuous synthetic demand stream.',
+          'Online forecasting': 'Forecast upcoming demand and track anomalies as new sales totals arrive.',
           'Inventory risk': 'Compare synthetic replenishment outcomes under variable demand.',
           'Forecast copilot': 'Investigate a planning decision using matched forecast evidence.',
           'Model analytics': 'Compare measured accuracy on generated daily sales.',
@@ -245,6 +247,7 @@ function App() {
         </>}
 
         {page === 'Live demand lab' && <LiveLab />}
+        {page === 'Online forecasting' && <OnlineLab />}
 
         {page === 'Inventory risk' && (() => {
           const scenario = orderScenario(stock, data.benchmark.demand_samples, shortageCost, 1, capacity)

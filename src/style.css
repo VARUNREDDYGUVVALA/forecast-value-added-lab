@@ -121,3 +121,6 @@ td,th{padding:11px 17px;border-top:1px solid #edf0eb}
 .stream-state span{font-size:11px;color:var(--muted);margin-left:4px}
 .stream-controls label{font-size:12px;color:var(--muted)}
 .stream-controls select{padding:7px 8px;border:1px solid var(--line);border-radius:7px;background:#fff;margin-left:4px;color:#20352e}
+.online-stats{margin-top:17px}
+.online-form{padding:0;margin:0;align-items:end}
+.online-form .primary{align-self:end}

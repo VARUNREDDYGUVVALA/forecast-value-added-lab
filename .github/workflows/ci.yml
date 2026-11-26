@@ -24,6 +24,7 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - run: python -m pytest -q
       - run: python -m backend.engine --export /tmp/forecast-demo.json && diff -u src/demo.json /tmp/forecast-demo.json
+      - run: python -m backend.online_demo --export /tmp/forecast-online.json && diff -u src/online-demo.json /tmp/forecast-online.json
       - run: npm ci
       - run: npm audit --audit-level=high
       - run: npm test
@@ -63,7 +64,10 @@ jobs:
               const entry = html.match(/<script\b[^>]*\bsrc="([^"]+\.js)"/)?.[1]
               if (!entry || !html.includes('Forecast Value Added Scorecard')) throw new Error('Dashboard entry point missing')
               const asset = await fetch(new URL(entry, url), { signal: AbortSignal.timeout(10000) })
-              if (!asset.ok || !(await asset.text()).includes('Live demand lab')) throw new Error('Live lab bundle unavailable')
+              const bundle = await asset.text()
+              if (!asset.ok || !bundle.includes('Live demand lab') || !bundle.includes('Online forecasting')) {
+                throw new Error('Forecasting bundle unavailable')
+              }
               console.log(`Verified the dashboard and live lab bundle at ${url}`)
               process.exit(0)
             } catch (error) {

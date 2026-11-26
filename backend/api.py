@@ -5,8 +5,10 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from .engine import demo_events, score
 from .investigation import Stage, investigate
+from .stream_api import router as stream_router
 
 app = FastAPI(title="Forecast Value Added Scorecard")
+app.include_router(stream_router)
 forecasts, actuals, products = demo_events()
 
 
