@@ -115,3 +115,16 @@ test('demand planner accepts one day and pastes more than 365 days', async ({ pa
   await page.getByRole('button', { name: 'Calculate plan' }).click()
   await expect(page.getByText(/5,000 submitted days/)).toBeVisible()
 })
+
+test('shared catalog model compares short-history forecasts and shows synthetic holdout evidence', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('button', { name: 'Plan my demand' }).click()
+  await page.getByLabel('Daily demand totals').fill('45')
+  await page.getByText('Compare a model trained across 96 items').click()
+  await page.getByLabel('Weekday of latest observation').selectOption({ label: 'Saturday' })
+  await page.getByRole('button', { name: 'Calculate plan' }).click()
+  await expect(page.getByText('Shared catalog model', { exact: true })).toBeVisible()
+  await expect(page.getByText('Shared model comparison · synthetic holdout')).toBeVisible()
+  await expect(page.getByText('6.5%', { exact: true })).toBeVisible()
+  await expect(page.getByText('15.5%', { exact: true })).toBeVisible()
+})

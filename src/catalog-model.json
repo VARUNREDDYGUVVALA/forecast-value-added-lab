@@ -1,0 +1,525 @@
+{
+  "items": 96,
+  "rows": 217728,
+  "departments": [
+    "Produce",
+    "Dairy",
+    "Bakery",
+    "Frozen",
+    "Pantry",
+    "Proteins",
+    "Beverages",
+    "Snacks"
+  ],
+  "intercept": 0.79942908,
+  "coefficients": [
+    -0.02733864,
+    0.00794621,
+    0.41933757,
+    0.02415293,
+    -0.79340935,
+    -0.2278798,
+    0.40665757,
+    -0.00637594,
+    -0.01360239,
+    0.00732471,
+    0.00097288,
+    -0.00579602,
+    0.00978871,
+    0.00717445,
+    0.0005136,
+    -0.07800648,
+    -0.08158111,
+    -0.08181871,
+    -0.07975494,
+    -0.02882086,
+    0.17345787,
+    0.17652423,
+    0.02849938,
+    0.03871062,
+    0.06595606,
+    0.05253022,
+    0.02219317,
+    -0.09744004,
+    -0.1104494
+  ],
+  "evaluation": {
+    "1": {
+      "1": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2400,
+          "baseline": 0.127411,
+          "pooled": 0.089295
+        },
+        "test": {
+          "windows": 2880,
+          "baseline": 0.133789,
+          "pooled": 0.086014
+        }
+      },
+      "2": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2400,
+          "baseline": 0.154192,
+          "pooled": 0.079833
+        },
+        "test": {
+          "windows": 2880,
+          "baseline": 0.156967,
+          "pooled": 0.078491
+        }
+      },
+      "3": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2304,
+          "baseline": 0.170659,
+          "pooled": 0.075505
+        },
+        "test": {
+          "windows": 2784,
+          "baseline": 0.168981,
+          "pooled": 0.073361
+        }
+      },
+      "4": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2304,
+          "baseline": 0.175015,
+          "pooled": 0.072885
+        },
+        "test": {
+          "windows": 2784,
+          "baseline": 0.173471,
+          "pooled": 0.070901
+        }
+      },
+      "5": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2208,
+          "baseline": 0.173144,
+          "pooled": 0.070796
+        },
+        "test": {
+          "windows": 2688,
+          "baseline": 0.174149,
+          "pooled": 0.069153
+        }
+      },
+      "6": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2208,
+          "baseline": 0.16485,
+          "pooled": 0.068665
+        },
+        "test": {
+          "windows": 2688,
+          "baseline": 0.166556,
+          "pooled": 0.06708
+        }
+      },
+      "7": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2112,
+          "baseline": 0.153622,
+          "pooled": 0.066527
+        },
+        "test": {
+          "windows": 2592,
+          "baseline": 0.154983,
+          "pooled": 0.064968
+        }
+      },
+      "10": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2016,
+          "baseline": 0.160631,
+          "pooled": 0.065513
+        },
+        "test": {
+          "windows": 2496,
+          "baseline": 0.15915,
+          "pooled": 0.063808
+        }
+      },
+      "14": {
+        "usePooled": true,
+        "validation": {
+          "windows": 1824,
+          "baseline": 0.156382,
+          "pooled": 0.064786
+        },
+        "test": {
+          "windows": 2304,
+          "baseline": 0.153793,
+          "pooled": 0.062643
+        }
+      }
+    },
+    "3": {
+      "1": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2400,
+          "baseline": 0.172634,
+          "pooled": 0.072787
+        },
+        "test": {
+          "windows": 2880,
+          "baseline": 0.171895,
+          "pooled": 0.069621
+        }
+      },
+      "2": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2400,
+          "baseline": 0.169631,
+          "pooled": 0.063344
+        },
+        "test": {
+          "windows": 2880,
+          "baseline": 0.169245,
+          "pooled": 0.062051
+        }
+      },
+      "3": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2304,
+          "baseline": 0.166201,
+          "pooled": 0.059866
+        },
+        "test": {
+          "windows": 2784,
+          "baseline": 0.167068,
+          "pooled": 0.058911
+        }
+      },
+      "4": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2304,
+          "baseline": 0.154862,
+          "pooled": 0.05768
+        },
+        "test": {
+          "windows": 2784,
+          "baseline": 0.157975,
+          "pooled": 0.056703
+        }
+      },
+      "5": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2208,
+          "baseline": 0.14345,
+          "pooled": 0.055364
+        },
+        "test": {
+          "windows": 2688,
+          "baseline": 0.14374,
+          "pooled": 0.054192
+        }
+      },
+      "6": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2208,
+          "baseline": 0.129652,
+          "pooled": 0.05329
+        },
+        "test": {
+          "windows": 2688,
+          "baseline": 0.12961,
+          "pooled": 0.051827
+        }
+      },
+      "7": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2112,
+          "baseline": 0.121867,
+          "pooled": 0.050782
+        },
+        "test": {
+          "windows": 2592,
+          "baseline": 0.122348,
+          "pooled": 0.049377
+        }
+      },
+      "10": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2016,
+          "baseline": 0.129821,
+          "pooled": 0.050835
+        },
+        "test": {
+          "windows": 2496,
+          "baseline": 0.130726,
+          "pooled": 0.050383
+        }
+      },
+      "14": {
+        "usePooled": true,
+        "validation": {
+          "windows": 1824,
+          "baseline": 0.116122,
+          "pooled": 0.049121
+        },
+        "test": {
+          "windows": 2304,
+          "baseline": 0.117253,
+          "pooled": 0.048655
+        }
+      }
+    },
+    "7": {
+      "1": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2400,
+          "baseline": 0.143567,
+          "pooled": 0.064361
+        },
+        "test": {
+          "windows": 2880,
+          "baseline": 0.142027,
+          "pooled": 0.062865
+        }
+      },
+      "2": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2400,
+          "baseline": 0.126137,
+          "pooled": 0.056115
+        },
+        "test": {
+          "windows": 2880,
+          "baseline": 0.125824,
+          "pooled": 0.055364
+        }
+      },
+      "3": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2304,
+          "baseline": 0.11774,
+          "pooled": 0.051823
+        },
+        "test": {
+          "windows": 2784,
+          "baseline": 0.118103,
+          "pooled": 0.052139
+        }
+      },
+      "4": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2304,
+          "baseline": 0.112601,
+          "pooled": 0.049696
+        },
+        "test": {
+          "windows": 2784,
+          "baseline": 0.113178,
+          "pooled": 0.050015
+        }
+      },
+      "5": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2208,
+          "baseline": 0.108542,
+          "pooled": 0.048153
+        },
+        "test": {
+          "windows": 2688,
+          "baseline": 0.10911,
+          "pooled": 0.048605
+        }
+      },
+      "6": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2208,
+          "baseline": 0.102006,
+          "pooled": 0.046758
+        },
+        "test": {
+          "windows": 2688,
+          "baseline": 0.102997,
+          "pooled": 0.04707
+        }
+      },
+      "7": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2112,
+          "baseline": 0.095823,
+          "pooled": 0.045354
+        },
+        "test": {
+          "windows": 2592,
+          "baseline": 0.096029,
+          "pooled": 0.045722
+        }
+      },
+      "10": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2016,
+          "baseline": 0.095969,
+          "pooled": 0.044899
+        },
+        "test": {
+          "windows": 2496,
+          "baseline": 0.096115,
+          "pooled": 0.045269
+        }
+      },
+      "14": {
+        "usePooled": true,
+        "validation": {
+          "windows": 1824,
+          "baseline": 0.093313,
+          "pooled": 0.043826
+        },
+        "test": {
+          "windows": 2304,
+          "baseline": 0.093732,
+          "pooled": 0.044651
+        }
+      }
+    },
+    "14": {
+      "1": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2400,
+          "baseline": 0.143567,
+          "pooled": 0.065147
+        },
+        "test": {
+          "windows": 2880,
+          "baseline": 0.142027,
+          "pooled": 0.063674
+        }
+      },
+      "2": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2400,
+          "baseline": 0.126137,
+          "pooled": 0.05754
+        },
+        "test": {
+          "windows": 2880,
+          "baseline": 0.125824,
+          "pooled": 0.056657
+        }
+      },
+      "3": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2304,
+          "baseline": 0.11774,
+          "pooled": 0.053541
+        },
+        "test": {
+          "windows": 2784,
+          "baseline": 0.118103,
+          "pooled": 0.053448
+        }
+      },
+      "4": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2304,
+          "baseline": 0.112601,
+          "pooled": 0.051497
+        },
+        "test": {
+          "windows": 2784,
+          "baseline": 0.113178,
+          "pooled": 0.051828
+        }
+      },
+      "5": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2208,
+          "baseline": 0.108542,
+          "pooled": 0.049788
+        },
+        "test": {
+          "windows": 2688,
+          "baseline": 0.10911,
+          "pooled": 0.050534
+        }
+      },
+      "6": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2208,
+          "baseline": 0.102006,
+          "pooled": 0.048478
+        },
+        "test": {
+          "windows": 2688,
+          "baseline": 0.102997,
+          "pooled": 0.049158
+        }
+      },
+      "7": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2112,
+          "baseline": 0.095823,
+          "pooled": 0.047352
+        },
+        "test": {
+          "windows": 2592,
+          "baseline": 0.096029,
+          "pooled": 0.047847
+        }
+      },
+      "10": {
+        "usePooled": true,
+        "validation": {
+          "windows": 2016,
+          "baseline": 0.095969,
+          "pooled": 0.047089
+        },
+        "test": {
+          "windows": 2496,
+          "baseline": 0.096115,
+          "pooled": 0.04744
+        }
+      },
+      "14": {
+        "usePooled": true,
+        "validation": {
+          "windows": 1824,
+          "baseline": 0.093313,
+          "pooled": 0.045603
+        },
+        "test": {
+          "windows": 2304,
+          "baseline": 0.093732,
+          "pooled": 0.046802
+        }
+      }
+    }
+  },
+  "check": 54.414257
+}

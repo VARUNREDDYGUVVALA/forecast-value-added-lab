@@ -25,6 +25,7 @@ jobs:
       - run: python -m pytest -q
       - run: python -m backend.engine --export /tmp/forecast-demo.json && diff -u src/demo.json /tmp/forecast-demo.json
       - run: python -m backend.online_demo --export /tmp/forecast-online.json && diff -u src/online-demo.json /tmp/forecast-online.json
+      - run: OPENBLAS_NUM_THREADS=1 python -m backend.catalog_model --export /tmp/fva-catalog-model.json && diff -u src/catalog-model.json /tmp/fva-catalog-model.json
       - run: npm ci
       - run: npm audit --audit-level=high
       - run: npm test
@@ -65,7 +66,7 @@ jobs:
               if (!entry || !html.includes('Forecast Value Added Scorecard')) throw new Error('Dashboard entry point missing')
               const asset = await fetch(new URL(entry, url), { signal: AbortSignal.timeout(10000) })
               const bundle = await asset.text()
-              if (!asset.ok || !bundle.includes('Live demand lab') || !bundle.includes('Online forecasting') || !bundle.includes('Demand planner') || !bundle.includes('Latest per item') || !bundle.includes('Simulated planning adjustment') || !bundle.includes('Provisional plan.')) {
+              if (!asset.ok || !bundle.includes('Live demand lab') || !bundle.includes('Online forecasting') || !bundle.includes('Demand planner') || !bundle.includes('Latest per item') || !bundle.includes('Simulated planning adjustment') || !bundle.includes('Provisional plan.') || !bundle.includes('Shared catalog model')) {
                 throw new Error('Forecasting bundle unavailable')
               }
               console.log(`Verified the dashboard and live lab bundle at ${url}`)

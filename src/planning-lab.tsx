@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { ArrowRight, Calculator, PackageCheck } from 'lucide-react'
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
+import { catalogEvidence, compareCatalog } from './catalog-forecast'
 import { catalog, departments, parseHistory, planDemand, sampleHistory, type Item } from './planning'
 
 const number = (n: number) => n.toLocaleString(undefined, { maximumFractionDigits: 1 })
 const percent = (n: number | null) => n === null ? 'Unavailable' : (n * 100).toFixed(1) + '%'
 type Draft = { text: string; sample: boolean }
-type Result = { item: Item; history: number[]; horizon: number; stock: number; pack: number; sample: boolean; plan: ReturnType<typeof planDemand> }
+type Result = { pooled: ReturnType<typeof compareCatalog>;  item: Item; history: number[]; horizon: number; stock: number; pack: number; sample: boolean; plan: ReturnType<typeof planDemand> }
 
 export function PlanningLab() {
   const [department, setDepartment] = useState(departments[0])
@@ -15,6 +16,9 @@ export function PlanningLab() {
   const [horizon, setHorizon] = useState(7)
   const [stock, setStock] = useState('40')
   const [pack, setPack] = useState('1')
+  const [lastWeekday, setLastWeekday] = useState('')
+  const [recentPromotion, setRecentPromotion] = useState(false)
+  const [targetPromotion, setTargetPromotion] = useState(false)
   const [error, setError] = useState('')
   const [result, setResult] = useState<Result | null>(null)
   const draft = drafts[item.id] ?? { text: '', sample: false }
@@ -42,19 +46,25 @@ export function PlanningLab() {
         throw new Error('Use whole units for stock and a pack size of at least one.')
       }
       setResult({ item, history, horizon, stock: available, pack: packSize, sample: draft.sample,
-        plan: planDemand(history, horizon, available, packSize) })
+        plan: planDemand(history, horizon, available, packSize),
+        pooled: lastWeekday === '' ? null : compareCatalog(history, item.category, horizon, Number(lastWeekday),
+          recentPromotion, targetPromotion) })
     } catch (issue) {
       setResult(null)
       setError(issue instanceof Error ? issue.message : 'Unable to analyze the input.')
     }
   }
 
+  const activePooled = result?.pooled?.report.usePooled ? result.pooled : null
+  const proposedOrder = result && activePooled
+    ? Math.ceil(Math.max(0, Math.ceil(activePooled.total) - result.stock) / result.pack) * result.pack
+    : result?.plan.order ?? 0
   const chart = result ? [
     ...result.history.slice(-28).map((value, index, values) => ({
       label: index === values.length - 1 ? 'Latest' : String(index - values.length + 1), observed: value,
       predicted: index === values.length - 1 ? value : null,
     })),
-    ...result.plan.daily.map((value, index) => ({ label: '+' + (index + 1), observed: null, predicted: value })),
+    ...(activePooled?.daily ?? result.plan.daily).map((value, index) => ({ label: '+' + (index + 1), observed: null, predicted: value })),
   ] : []
 
   return <>
@@ -86,6 +96,17 @@ export function PlanningLab() {
             </select></label>
             <label>Units per pack<input type="number" min={1} max={1000000} required value={pack} onChange={e => { setPack(e.target.value); setResult(null) }} /></label>
           </div>
+          <details className="catalog-settings">
+            <summary>Compare a model trained across 96 items</summary>
+            <label>Weekday of latest observation<select value={lastWeekday} onChange={e => { setLastWeekday(e.target.value); setResult(null) }}>
+              <option value="">Unknown</option>
+              {['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'].map((day, index) =>
+                <option key={day} value={index}>{day}</option>)}
+            </select></label>
+            <label><input type="checkbox" checked={recentPromotion} onChange={e => { setRecentPromotion(e.target.checked); setResult(null) }} /> Latest observation was on promotion</label>
+            <label><input type="checkbox" checked={targetPromotion} onChange={e => { setTargetPromotion(e.target.checked); setResult(null) }} /> Promotion planned for the entire lead time</label>
+            <p className="muted">Uses synthetic training data. Choose the latest weekday to compare forecasts for up to 14 submitted days.</p>
+          </details>
           <button className="primary">Calculate plan <ArrowRight size={16} /></button>
           {error && <p className="negative" role="alert">{error}</p>}
         </form>
@@ -93,21 +114,30 @@ export function PlanningLab() {
       <section className="panel">
         <header className="panel-head"><div><h2>Replenishment plan</h2><p>{result ? result.item.name + ' · ' + (result.sample ? 'Synthetic sample' : 'Your demand history') : 'Enter your daily sales or load a sample to get started.'}</p></div><span className="stat-icon"><PackageCheck size={17}/></span></header>
         {result && <div className="form-content" aria-live="polite">
-          <section className="planning-order"><span>Suggested order</span><strong>{number(result.plan.order)} units</strong><p>{result.plan.order ? `${number(result.plan.order / result.pack)} packs of ${number(result.pack)}` : 'Current stock meets the planning target.'}</p></section>
+          <section className="planning-order"><span>Suggested order</span><strong>{number(proposedOrder)} units</strong><p>{proposedOrder ? `${number(proposedOrder / result.pack)} packs of ${number(result.pack)}` : 'Current stock meets the planning target.'}</p></section>
           <div className="result">
-            <span>{result.horizon}-day demand forecast <b>{number(result.plan.total)} units</b></span>
-            <span>Historical-error range <b>{result.plan.lower === null || result.plan.upper === null ? 'More history needed' : `${number(result.plan.lower)}–${number(result.plan.upper)} units`}</b></span>
+            <span>{result.horizon}-day demand forecast <b>{number(activePooled?.total ?? result.plan.total)} units</b></span>
+            <span>Historical-error range <b>{activePooled || result.plan.lower === null || result.plan.upper === null ? 'More history needed' : `${number(result.plan.lower)}–${number(result.plan.upper)} units`}</b></span>
             <span>Stock on hand <b>{number(result.stock)} units</b></span>
-            <span>Planning target <b>{number(result.plan.target)} units</b></span>
-            <span>Forecast model <b>{result.plan.model}</b></span>
-            <span>Holdout WAPE <b>{percent(result.plan.wape)}</b></span>
-            {result.plan.selection > 0 && <span>Weekly seasonal benchmark <b>{percent(result.plan.baselineWape)}</b></span>}
+            <span>Planning target <b>{number(activePooled ? Math.ceil(activePooled.total) : result.plan.target)} units</b></span>
+            <span>Forecast model <b>{activePooled ? 'Shared catalog model' : result.plan.model}</b></span>
+            <span>Holdout WAPE <b>{percent(activePooled ? null : result.plan.wape)}</b></span>
+            {!activePooled && result.plan.selection > 0 && <span>Weekly seasonal benchmark <b>{percent(result.plan.baselineWape)}</b></span>}
           </div>
-          <p>{result.plan.upper === null
+          <p>{activePooled ? 'The shared model uses your recent demand and patterns from synthetic catalog data. This order uses its point forecast. There is no measured safety buffer for your item.'
+            : result.plan.upper === null
             ? result.history.length < 7
               ? 'Provisional plan. The forecast repeats your average daily demand, and there is too little history to estimate a safety buffer.'
               : 'The order uses the rounded point forecast. Add more daily history to estimate a safety buffer.'
             : 'The target uses the top of the historical-error range, then subtracts on-hand stock. The order is rounded up to a full pack.'}</p>
+          {result.pooled && <div className="result">
+            <strong>Shared model comparison · synthetic holdout</strong>
+            <span>Shared forecast <b>{number(result.pooled.total)} units</b></span>
+            <span>Per-item forecast <b>{number(result.plan.total)} units</b></span>
+            <span>Shared model WAPE <b>{percent(result.pooled.report.test.pooled)}</b></span>
+            <span>Per-item baseline WAPE <b>{percent(result.pooled.report.test.baseline)}</b></span>
+            <p>{catalogEvidence.items} items · {result.pooled.context}-day history cohort · {number(result.pooled.report.test.windows)} matched lead-time windows. The model choice used a separate validation period.</p>
+          </div>}
           <p className="muted">This estimates demand during lead time. Check incoming orders, shelf life, and supplier minimums before ordering.</p>
         </div>}
       </section>
