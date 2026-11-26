@@ -1,0 +1,33 @@
+import { expect, test } from '@playwright/test'
+
+test('replay, investigate, save and approve a historical forecast', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.getByRole('heading', { name: 'Forecast overview' })).toBeVisible()
+  await page.getByRole('button', { name: 'Explore the yogurt case' }).click()
+  await expect(page.getByRole('img', { name: /ML forecast \+150.*Promotion \+80.*Override −180/ })).toBeVisible()
+  await page.getByRole('spinbutton', { name: 'Proposed forecast (units)' }).fill('1100')
+  await expect(page.getByText('+20', { exact: true })).toBeVisible()
+  await page.getByRole('button', { name: 'Save proposal' }).click()
+  await expect(page.getByRole('status')).toHaveText('Proposal saved in this browser.')
+  await page.reload()
+  await page.getByRole('button', { name: 'Audit history' }).click()
+  await expect(page.getByRole('cell', { name: '1,100' })).toBeVisible()
+  await page.getByRole('button', { name: 'Approve locally' }).click()
+  await expect(page.getByRole('cell', { name: 'Approved locally' })).toBeVisible()
+  await page.getByRole('button', { name: 'Forecast copilot' }).click()
+  await page.getByRole('button', { name: 'Run investigation' }).click()
+  await expect(page.getByText(/Absolute error moved from 20 to 200 units/)).toBeVisible()
+  await page.getByRole('button', { name: 'Agent monitor' }).click()
+  await expect(page.getByText(/Selected YGT-1001/)).toBeVisible()
+})
+
+test('filter portfolio results on a mobile viewport', async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 })
+  await page.goto('/')
+  await page.getByLabel('Category').selectOption('Dairy')
+  await expect(page.getByRole('button', { name: /Greek Yogurt YGT/ })).toBeVisible()
+  await expect(page.getByRole('button', { name: /Fresh Apples APL/ })).toHaveCount(0)
+  await page.getByRole('button', { name: 'Toggle navigation' }).click()
+  await page.getByRole('button', { name: 'FVA scorecard', exact: true }).click()
+  await expect(page.getByRole('heading', { name: 'FVA scorecard' })).toBeVisible()
+})

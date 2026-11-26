@@ -1,0 +1,8 @@
+fastapi==0.165.0
+uvicorn==0.54.0
+scikit-learn==1.6.1
+duckdb==1.4.4
+langgraph==1.2.24
+mcp==1.30.0
+numpy==2.5.5
+scipy==1.18.1

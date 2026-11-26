@@ -1,0 +1,363 @@
+{
+  "products": [
+    {
+      "sku": "YGT-1001",
+      "name": "Greek Yogurt",
+      "category": "Dairy",
+      "baseline": 850,
+      "ml": 1000,
+      "promotion": 1120,
+      "override": 1300,
+      "actual": 1100,
+      "reason": "Expected promotion uplift",
+      "versions": [
+        {
+          "sku": "YGT-1001",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 850,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "YGT-1001",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1000,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "YGT-1001",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1120,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "YGT-1001",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 1300,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "APL-1003",
+      "name": "Fresh Apples",
+      "category": "Produce",
+      "baseline": 980,
+      "ml": 1050,
+      "promotion": 1100,
+      "override": 950,
+      "actual": 1080,
+      "reason": "Supply concern",
+      "versions": [
+        {
+          "sku": "APL-1003",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 980,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "APL-1003",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 1050,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "APL-1003",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 1100,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "APL-1003",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 950,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "BRD-1002",
+      "name": "Whole Wheat Bread",
+      "category": "Bakery",
+      "baseline": 620,
+      "ml": 680,
+      "promotion": 710,
+      "override": 750,
+      "actual": 760,
+      "reason": "Local event",
+      "versions": [
+        {
+          "sku": "BRD-1002",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 620,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "BRD-1002",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 680,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "BRD-1002",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 710,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "BRD-1002",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 750,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "MLK-1004",
+      "name": "Whole Milk",
+      "category": "Dairy",
+      "baseline": 450,
+      "ml": 490,
+      "promotion": 490,
+      "override": 510,
+      "actual": 500,
+      "reason": "Local demand adjustment",
+      "versions": [
+        {
+          "sku": "MLK-1004",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 450,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "MLK-1004",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 490,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "MLK-1004",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 490,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "MLK-1004",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 510,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "AVO-1005",
+      "name": "Hass Avocado",
+      "category": "Produce",
+      "baseline": 720,
+      "ml": 780,
+      "promotion": 810,
+      "override": 830,
+      "actual": 815,
+      "reason": "Weekend demand",
+      "versions": [
+        {
+          "sku": "AVO-1005",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 720,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "AVO-1005",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 780,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "AVO-1005",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 810,
+          "issued": "2025-02-26T13:00:00Z"
+        },
+        {
+          "sku": "AVO-1005",
+          "target": "2025-03-08",
+          "stage": "override",
+          "units": 830,
+          "issued": "2025-02-27T13:00:00Z"
+        }
+      ]
+    },
+    {
+      "sku": "CRS-1006",
+      "name": "Butter Croissants",
+      "category": "Bakery",
+      "baseline": 350,
+      "ml": 420,
+      "promotion": 440,
+      "override": null,
+      "actual": 455,
+      "reason": "No override",
+      "versions": [
+        {
+          "sku": "CRS-1006",
+          "target": "2025-03-08",
+          "stage": "baseline",
+          "units": 350,
+          "issued": "2025-02-24T13:00:00Z"
+        },
+        {
+          "sku": "CRS-1006",
+          "target": "2025-03-08",
+          "stage": "ml",
+          "units": 420,
+          "issued": "2025-02-25T13:00:00Z"
+        },
+        {
+          "sku": "CRS-1006",
+          "target": "2025-03-08",
+          "stage": "promotion",
+          "units": 440,
+          "issued": "2025-02-26T13:00:00Z"
+        }
+      ]
+    }
+  ],
+  "portfolio": {
+    "stages": [
+      {
+        "stage": "baseline",
+        "error": 740,
+        "mae": 123.33333333333333,
+        "wape": 0.15711252653927812,
+        "bias": -740,
+        "fva": null
+      },
+      {
+        "stage": "ml",
+        "error": 290,
+        "mae": 48.333333333333336,
+        "wape": 0.06157112526539278,
+        "bias": -290,
+        "fva": 450
+      },
+      {
+        "stage": "promotion",
+        "error": 120,
+        "mae": 20.0,
+        "wape": 0.025477707006369428,
+        "bias": -40,
+        "fva": 170
+      },
+      {
+        "stage": "override",
+        "error": 380,
+        "mae": 63.333333333333336,
+        "wape": 0.08067940552016985,
+        "bias": 70,
+        "fva": -260
+      }
+    ],
+    "matched": 6,
+    "excluded": 0,
+    "coverage": 0.8333333333333334,
+    "win_rate": 0.2,
+    "tie_rate": 0.2
+  },
+  "benchmark": {
+    "models": [
+      {
+        "name": "Seasonal Naive",
+        "mae": 8.75793651,
+        "wape": 0.08707145,
+        "rmse": 12.1101099,
+        "bias": -0.57539683,
+        "mase": 0.9737118
+      },
+      {
+        "name": "7-day Moving Average",
+        "mae": 9.61564626,
+        "wape": 0.0955988,
+        "rmse": 11.79277257,
+        "bias": -0.3276644,
+        "mase": 1.06906745
+      },
+      {
+        "name": "Gradient Boosting",
+        "mae": 5.39454086,
+        "wape": 0.05363255,
+        "rmse": 6.56271807,
+        "bias": -4.28720581,
+        "mase": 0.59976097
+      }
+    ],
+    "samples": 252,
+    "windows": 3,
+    "coverage": 0.73412698,
+    "final_holdout_wape": 0.05019743,
+    "pinball_p10": 1.21076679,
+    "pinball_p90": 1.23457709,
+    "demand_samples": [
+      78,
+      92,
+      106,
+      119,
+      134,
+      151,
+      63,
+      75,
+      90,
+      97,
+      109,
+      142,
+      68,
+      80,
+      83,
+      108,
+      110,
+      147,
+      63,
+      78,
+      93,
+      102,
+      118,
+      142,
+      64,
+      78,
+      91,
+      107,
+      131,
+      120,
+      62,
+      74,
+      87,
+      101,
+      131,
+      129,
+      83,
+      92,
+      101,
+      117,
+      154,
+      137
+    ]
+  },
+  "cutoff": "2025-03-01T00:00:00Z"
+}
