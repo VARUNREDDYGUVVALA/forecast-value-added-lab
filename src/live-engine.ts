@@ -1,12 +1,17 @@
+import { catalog } from './planning.ts'
+
+export const streamItemCount = catalog.length
 export type Regime = 'Normal trade' | 'Promotion surge' | 'Demand shift'
 export const regimes: Regime[] = ['Normal trade', 'Promotion surge', 'Demand shift']
 export const retention = 600
 const mask = (1n << 64n) - 1n
-const products = ['Greek Yogurt', 'Fresh Apples', 'Whole Wheat Bread', 'Whole Milk', 'Hass Avocado', 'Butter Croissants']
+const assortmentSize = BigInt(streamItemCount)
 
 export type DemandEvent = {
   sequence: string
+  sku: string
   product: string
+  department: string
   regime: Regime
   actual: number
   baseline: number
@@ -24,9 +29,10 @@ function noise(index: bigint, salt: bigint) {
 }
 
 export function generateDemand(sequence: bigint, regime: Regime): DemandEvent {
-  const sku = Number(sequence % BigInt(products.length))
-  const day = sequence / BigInt(products.length)
-  const baseline = 120 + sku * 22 + (day % 7n >= 5n ? 24 : 0)
+  const sku = Number(sequence % assortmentSize)
+  const day = sequence / assortmentSize
+  const item = catalog[sku]
+  const baseline = 75 + (item.index * 37) % 175 + (day % 7n >= 5n ? 24 : 0)
   const promoted = noise(sequence, 1n) < (regime === 'Promotion surge' ? 0.65 : 0.23)
   const promotion = baseline + (promoted ? 48 : 0)
   const planned = noise(sequence, 2n) < 0.5
@@ -37,7 +43,7 @@ export function generateDemand(sequence: bigint, regime: Regime): DemandEvent {
   // Resolve simulated sales after the guard has selected its candidate.
   const shift = regime === 'Demand shift' ? (sku % 2 ? 44 : -36) : 0
   const actual = Math.max(0, Math.round(promotion + shift + (noise(sequence, 4n) - 0.5) * 42))
-  return { sequence: sequence.toString(), product: products[sku], regime, actual, baseline, promotion, override, guarded, held }
+  return { sequence: sequence.toString(), sku: item.id, product: item.name, department: item.category, regime, actual, baseline, promotion, override, guarded, held }
 }
 
 export function summarize(events: DemandEvent[]) {

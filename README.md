@@ -72,7 +72,7 @@ See the [methodology, data dictionary, and architecture](docs/methodology.md) fo
 
 Open **Live demand lab** to run a continuous synthetic experiment. Switch between normal trade, promotion surge, and demand shift. The two forecasts are scored against the same simulated actuals, with decisions calculated before the actuals are generated. The comparison measures forecast error under the simulator's assumptions.
 
-The browser retains the last 600 observations and keeps a separate, arbitrary-precision event counter. The CLI uses the same generator and streams newline-delimited JSON with backpressure. Omit `--count` for a stream that runs until stopped or until its consumer closes. Use the next sequence number and the same regime to resume a segment. Keep the regime schedule externally if replaying a run with regime changes.
+The browser and CLI cycle through all 96 catalog items. The live table opens with the latest event for each item and supports search by product, department, or SKU. The browser retains the last 600 observations and keeps a separate, arbitrary-precision event counter. The CLI uses the same generator and streams newline-delimited JSON with backpressure. Omit `--count` for a stream that runs until stopped or until its consumer closes. Use the next sequence number and the same regime to resume a segment. Keep the regime schedule externally if replaying a run with regime changes.
 
 ```sh
 node scripts/demand-stream.mjs --regime 'Demand shift' --count 100000 > demand.ndjson

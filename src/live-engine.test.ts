@@ -27,3 +27,12 @@ it('measures improvement and harm from withholding overrides on the same events'
   expect(report).toEqual({ plannerWape: 0.2, shadowWape: 0.15, shadowFva: 10, held: 2, helped: 1, hurt: 1 })
   expect(summarize([]).plannerWape).toBeNull()
 })
+
+it('streams every catalog SKU exactly once per cycle', () => {
+  const first = advance(0n, [], 96, 'Normal trade')
+  const second = advance(first.cursor, [], 96, 'Normal trade')
+  expect(new Set(first.events.map(event => event.sku)).size).toBe(96)
+  expect(new Set(first.events.map(event => event.product)).size).toBe(96)
+  expect(new Set(first.events.map(event => event.department)).size).toBe(8)
+  expect(second.events.map(event => event.sku)).toEqual(first.events.map(event => event.sku))
+})

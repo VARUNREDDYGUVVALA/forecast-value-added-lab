@@ -133,3 +133,8 @@ td,th{padding:11px 17px;border-top:1px solid #edf0eb}
 .planning-order{display:grid;gap:3px;padding:14px;border-radius:8px;background:#e6f3ea;color:#214f40}
 .planning-order strong{font:800 27px/1.25 Manrope,sans-serif}
 @media(max-width:680px){.planning-grid{grid-template-columns:1fr}.plan-inputs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.live-table-tools{display:flex;flex-wrap:wrap;gap:10px;padding:0 18px 12px;color:var(--muted);font-size:12px}
+.live-table-tools label{display:flex;align-items:center;gap:6px}
+.live-table-tools input,.live-table-tools select{max-width:100%;padding:7px 8px;border:1px solid var(--line);border-radius:7px;background:#fff;color:#20352e}
+.live-table{max-height:420px}
+.live-table th{position:sticky;top:0;z-index:1}

@@ -74,3 +74,15 @@ test('calculates a lead-time plan from pasted real inputs for an alternate groce
   await page.getByRole('button', { name: 'Calculate plan' }).click()
   await expect(page.getByText('Frozen Peas · Synthetic sample')).toBeVisible()
 })
+
+test('live events cover all 96 grocery items and can be filtered by department', async ({ page }) => {
+  await page.goto('/')
+  await page.getByRole('button', { name: 'Open live lab' }).click()
+  await page.getByRole('button', { name: 'Pause', exact: true }).click()
+  const events = page.getByRole('region', { name: 'Live demand events' })
+  await expect(events.getByRole('row')).toHaveCount(97)
+  await page.getByLabel('Search items').fill('Frozen')
+  await expect(events.getByRole('row')).toHaveCount(13)
+  await expect(events.getByText('Frozen Peas', { exact: false })).toBeVisible()
+  await expect(events.getByText('Bananas', { exact: false })).toHaveCount(0)
+})

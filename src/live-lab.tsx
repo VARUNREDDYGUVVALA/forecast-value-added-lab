@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Activity, Pause, Play, RotateCcw, ShieldCheck } from 'lucide-react'
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import { advance, regimes, retention, summarize, type Regime } from './live-engine'
+import { advance, regimes, retention, streamItemCount, summarize, type Regime } from './live-engine'
 
 const percent = (v: number | null) => v === null ? '—' : (100 * v).toFixed(1) + '%'
 const batchSizes = [1, 10, 100]
@@ -10,7 +10,9 @@ export function LiveLab() {
   const [regime, setRegime] = useState<Regime>('Normal trade')
   const [speed, setSpeed] = useState(10)
   const [running, setRunning] = useState(true)
-  const [stream, setStream] = useState(() => advance(0n, [], 60, 'Normal trade'))
+  const [stream, setStream] = useState(() => advance(0n, [], streamItemCount, 'Normal trade'))
+  const [view, setView] = useState('item')
+  const [query, setQuery] = useState('')
 
   useEffect(() => {
     if (!running) return
@@ -18,6 +20,12 @@ export function LiveLab() {
     return () => window.clearInterval(timer)
   }, [regime, running, speed])
 
+  const latestByItem = new Map(stream.events.map(event => [event.sku, event]))
+  const rows = view === 'item'
+    ? [...latestByItem.values()].sort((left, right) => left.sku.localeCompare(right.sku))
+    : stream.events.slice(-24).reverse()
+  const filter = query.trim().toLowerCase()
+  const visible = rows.filter(event => [event.sku, event.product, event.department].some(value => value.toLowerCase().includes(filter)))
   const result = summarize(stream.events)
   const cohorts = regimes.map(name => {
     const events = stream.events.filter(event => event.regime === name)
@@ -31,7 +39,7 @@ export function LiveLab() {
 
   return <>
     <section className="panel stream-controls">
-      <div className="stream-state"><Activity size={18} /><strong>{running ? 'Stream running' : 'Stream paused'}</strong><span>Synthetic demand</span></div>
+      <div className="stream-state"><Activity size={18} /><strong>{running ? 'Stream running' : 'Stream paused'}</strong><span>{streamItemCount} synthetic items</span></div>
       <label>Demand regime <select value={regime} onChange={e => setRegime(e.target.value as Regime)}>
         {regimes.map(item => <option key={item}>{item}</option>)}
       </select></label>
@@ -70,9 +78,19 @@ export function LiveLab() {
       <thead><tr><th>Regime</th><th>Matched</th><th>Held</th><th>Improved</th><th>Worsened</th><th>FVA (units)</th></tr></thead>
       <tbody>{cohorts.map(row => <tr key={row.name}><td>{row.name}</td><td>{row.count}</td><td>{row.held}</td><td>{row.helped}</td><td>{row.hurt}</td><td>{row.shadowFva > 0 ? '+' : ''}{row.shadowFva.toLocaleString()}</td></tr>)}</tbody>
     </table></div></section>
-    <section className="panel"><header className="panel-head"><div><h2>Latest observed events</h2><p>Forecasts and simulated sales, newest first</p></div></header><div className="table-wrap"><table>
-      <thead><tr><th>Event</th><th>Product</th><th>Regime</th><th>Planner</th><th>Guardrail</th><th>Actual</th><th>Decision</th></tr></thead>
-      <tbody>{stream.events.slice(-8).reverse().map(e => <tr key={e.sequence}><td>{e.sequence}</td><td>{e.product}</td><td>{e.regime}</td><td>{e.override}</td><td>{e.guarded}</td><td>{e.actual}</td><td><span className={'metric ' + (e.held ? 'negative' : 'neutral')}>{e.held ? 'Held for review' : 'Carried through'}</span></td></tr>)}</tbody>
-    </table></div></section>
+    <section className="panel">
+      <header className="panel-head"><div><h2>Latest observed events</h2><p>{visible.length} of {rows.length} rows · {latestByItem.size} of {streamItemCount} items represented</p></div></header>
+      <div className="live-table-tools">
+        <label>Search items <input type="search" value={query} placeholder="Item, department, or SKU" onChange={e => setQuery(e.target.value)} /></label>
+        <label>Event view <select value={view} onChange={e => setView(e.target.value)}><option value="item">Latest per item</option><option value="recent">24 newest events</option></select></label>
+      </div>
+      <div className="table-wrap live-table" tabIndex={0} role="region" aria-label="Live demand events">
+        <table>
+          <thead><tr><th>Event</th><th>Product</th><th>Department</th><th>Regime</th><th>Planner</th><th>Guardrail</th><th>Actual</th><th>Decision</th></tr></thead>
+          <tbody>{visible.map(e => <tr key={e.sequence}><td>{e.sequence}</td><td>{e.product} <small className="muted">{e.sku}</small></td><td>{e.department}</td><td>{e.regime}</td><td>{e.override}</td><td>{e.guarded}</td><td>{e.actual}</td><td><span className={'metric ' + (e.held ? 'negative' : 'neutral')}>{e.held ? 'Held for review' : 'Carried through'}</span></td></tr>)}</tbody>
+        </table>
+      </div>
+      {!visible.length && <p className="form-content muted">{rows.length ? 'No items match your search.' : 'Waiting for new events.'}</p>}
+    </section>
   </>
 }
