@@ -6,12 +6,13 @@ import data from './demo.json'
 import { orderScenario, portfolio, quantity, replay, stageLabels, stages, type Product } from './analytics'
 import { LiveLab } from './live-lab'
 import { OnlineLab } from './online-lab'
+import { PlanningLab } from './planning-lab'
 import './style.css'
 
 const nav = [
   { label: 'Overview', icon: LayoutDashboard }, { label: 'FVA scorecard', icon: BarChart3 },
   { label: 'Forecast explorer', icon: ChartNoAxesCombined }, { label: 'Planner overrides', icon: SlidersHorizontal },
-  { label: 'Live demand lab', icon: Activity }, { label: 'Online forecasting', icon: ChartNoAxesCombined }, { label: 'Inventory risk', icon: Boxes }, { label: 'Forecast copilot', icon: Sparkles },
+  { label: 'Demand planner', icon: PackageSearch }, { label: 'Live demand lab', icon: Activity }, { label: 'Online forecasting', icon: ChartNoAxesCombined }, { label: 'Inventory risk', icon: Boxes }, { label: 'Forecast copilot', icon: Sparkles },
   { label: 'Model analytics', icon: Activity }, { label: 'Agent monitor', icon: GitBranch },
   { label: 'Audit history', icon: ClipboardList },
 ]
@@ -199,6 +200,7 @@ function App() {
           'Forecast explorer': 'Inspect forecast versions and replay a historical decision.',
           'Planner overrides': 'Find which overrides improved or worsened accuracy.',
           'Live demand lab': 'Stress-test a planner override guardrail against a continuous synthetic demand stream.',
+          'Demand planner': 'Use your sales history to forecast demand and decide how much to reorder.',
           'Online forecasting': 'Forecast upcoming demand and track anomalies as new sales totals arrive.',
           'Inventory risk': 'Compare synthetic replenishment outcomes under variable demand.',
           'Forecast copilot': 'Investigate a planning decision using matched forecast evidence.',
@@ -210,7 +212,7 @@ function App() {
         {['Forecast explorer', 'Forecast copilot'].includes(page) && picker}</div>
 
         {page === 'Overview' && <>
-          <section className="hero"><div className="hero-content"><div className="hero-label"><Sparkles size={15} /> FEATURED INVESTIGATION</div><h2>When more forecast<br />means more error.</h2><p>Follow a Greek yogurt promotion through four forecast stages to see where accuracy improved and where it slipped.</p><button className="hero-button" onClick={() => open(data.products[0])}>Explore the yogurt case <ArrowRight size={17} /></button><button className="hero-button hero-link" onClick={() => go('Live demand lab')}>Open live lab <Activity size={16} /></button></div></section>
+          <section className="hero"><div className="hero-content"><div className="hero-label"><Sparkles size={15} /> FEATURED INVESTIGATION</div><h2>When more forecast<br />means more error.</h2><p>Follow a Greek yogurt promotion through four forecast stages to see where accuracy improved and where it slipped.</p><button className="hero-button" onClick={() => open(data.products[0])}>Explore the yogurt case <ArrowRight size={17} /></button><button className="hero-button hero-link" onClick={() => go('Live demand lab')}>Open live lab <Activity size={16} /></button><button className="hero-button hero-link" onClick={() => go('Demand planner')}>Plan my demand <ArrowRight size={16} /></button></div></section>
           <div className="stat-grid">
             {[
               { title: 'Matched forecasts', value: String(selectedProducts.length), sub: 'Eligible product records', icon: ClipboardList, color: '' },
@@ -248,6 +250,7 @@ function App() {
 
         {page === 'Live demand lab' && <LiveLab />}
         {page === 'Online forecasting' && <OnlineLab />}
+        {page === 'Demand planner' && <PlanningLab />}
 
         {page === 'Inventory risk' && (() => {
           const scenario = orderScenario(stock, data.benchmark.demand_samples, shortageCost, 1, capacity)
